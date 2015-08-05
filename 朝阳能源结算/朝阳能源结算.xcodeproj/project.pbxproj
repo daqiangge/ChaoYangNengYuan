@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840D29DC1B71A5FC00DA2155 /* LQAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */; };
+		840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29E31B72062000DA2155 /* LQChangePasswordVC.m */; };
+		840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */; };
 		844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844568451B7053CE005E88EE /* ______.xcdatamodeld */; };
 		8445684F1B7053CF005E88EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445684E1B7053CF005E88EE /* Images.xcassets */; };
 		8445685E1B7053CF005E88EE /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445685D1B7053CF005E88EE /* ______Tests.m */; };
@@ -41,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840D29D91B71A5FC00DA2155 /* LQAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountTableViewCell.h; sourceTree = "<group>"; };
+		840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountTableViewCell.m; sourceTree = "<group>"; };
+		840D29E21B72062000DA2155 /* LQChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQChangePasswordVC.h; sourceTree = "<group>"; };
+		840D29E31B72062000DA2155 /* LQChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChangePasswordVC.m; sourceTree = "<group>"; };
+		840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQChangePasswordVC.xib; sourceTree = "<group>"; };
 		8445683B1B7053CE005E88EE /* 朝阳能源结算.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朝阳能源结算.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445683F1B7053CE005E88EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844568461B7053CE005E88EE /* ______.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "______.xcdatamodel"; sourceTree = "<group>"; };
@@ -109,6 +117,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840D29DE1B7205C600DA2155 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				840D29DF1B7205C600DA2155 /* Controller */,
+				840D29E01B7205C600DA2155 /* Model */,
+				840D29E11B7205C600DA2155 /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		840D29DF1B7205C600DA2155 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				840D29E21B72062000DA2155 /* LQChangePasswordVC.h */,
+				840D29E31B72062000DA2155 /* LQChangePasswordVC.m */,
+				840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		840D29E01B7205C600DA2155 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		840D29E11B7205C600DA2155 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		844568321B7053CE005E88EE = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				844568681B70569E005E88EE /* Main(主要) */,
+				840D29DE1B7205C600DA2155 /* Setting(设置) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -207,6 +250,8 @@
 			children = (
 				844568771B70569E005E88EE /* ViewController.h */,
 				844568781B70569E005E88EE /* ViewController.m */,
+				840D29D91B71A5FC00DA2155 /* LQAccountTableViewCell.h */,
+				840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +348,7 @@
 		844568331B7053CE005E88EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LQ;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = dieshang;
 				TargetAttributes = {
@@ -339,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */,
 				8445684F1B7053CF005E88EE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +420,8 @@
 				844568991B70569E005E88EE /* UIColor+LQExtension.m in Sources */,
 				844568A31B70569E005E88EE /* NSArray+MASAdditions.m in Sources */,
 				844568A41B70569E005E88EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				840D29DC1B71A5FC00DA2155 /* LQAccountTableViewCell.m in Sources */,
+				840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */,
 				844568971B70569E005E88EE /* UIBarButtonItem+LQExtension.m in Sources */,
 				8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */,
 				8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */,
