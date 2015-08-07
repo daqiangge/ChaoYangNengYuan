@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840D29DC1B71A5FC00DA2155 /* LQAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */; };
 		840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29E31B72062000DA2155 /* LQChangePasswordVC.m */; };
 		840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */; };
+		8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927091B74A24D00CD6FD1 /* ViewController.m */; };
+		841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8419270E1B74A25500CD6FD1 /* LQAccountVC.m */; };
+		841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */; };
+		841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927171B74A29400CD6FD1 /* LQLoginVC.m */; };
+		8419271A1B74A29400CD6FD1 /* LQLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841927181B74A29400CD6FD1 /* LQLoginVC.xib */; };
 		844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844568451B7053CE005E88EE /* ______.xcdatamodeld */; };
 		8445684F1B7053CF005E88EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445684E1B7053CF005E88EE /* Images.xcassets */; };
 		8445685E1B7053CF005E88EE /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445685D1B7053CF005E88EE /* ______Tests.m */; };
@@ -18,7 +22,6 @@
 		844568991B70569E005E88EE /* UIColor+LQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568711B70569E005E88EE /* UIColor+LQExtension.m */; };
 		8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568731B70569E005E88EE /* UIImage+LQExtension.m */; };
 		8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568751B70569E005E88EE /* UIView+Extension.m */; };
-		8445689C1B70569E005E88EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568781B70569E005E88EE /* ViewController.m */; };
 		8445689D1B70569E005E88EE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445687C1B70569E005E88EE /* MASCompositeConstraint.m */; };
 		8445689E1B70569E005E88EE /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445687F1B70569E005E88EE /* MASConstraint.m */; };
 		8445689F1B70569E005E88EE /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568811B70569E005E88EE /* MASConstraintMaker.m */; };
@@ -44,11 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		840D29D91B71A5FC00DA2155 /* LQAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountTableViewCell.h; sourceTree = "<group>"; };
-		840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountTableViewCell.m; sourceTree = "<group>"; };
 		840D29E21B72062000DA2155 /* LQChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQChangePasswordVC.h; sourceTree = "<group>"; };
 		840D29E31B72062000DA2155 /* LQChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChangePasswordVC.m; sourceTree = "<group>"; };
 		840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQChangePasswordVC.xib; sourceTree = "<group>"; };
+		841927081B74A24D00CD6FD1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		841927091B74A24D00CD6FD1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8419270D1B74A25500CD6FD1 /* LQAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountVC.h; sourceTree = "<group>"; };
+		8419270E1B74A25500CD6FD1 /* LQAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountVC.m; sourceTree = "<group>"; };
+		841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountTableViewCell.h; sourceTree = "<group>"; };
+		841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountTableViewCell.m; sourceTree = "<group>"; };
+		841927161B74A29400CD6FD1 /* LQLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQLoginVC.h; sourceTree = "<group>"; };
+		841927171B74A29400CD6FD1 /* LQLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQLoginVC.m; sourceTree = "<group>"; };
+		841927181B74A29400CD6FD1 /* LQLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQLoginVC.xib; sourceTree = "<group>"; };
 		8445683B1B7053CE005E88EE /* 朝阳能源结算.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朝阳能源结算.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8445683F1B7053CE005E88EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844568461B7053CE005E88EE /* ______.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "______.xcdatamodel"; sourceTree = "<group>"; };
@@ -66,8 +76,6 @@
 		844568731B70569E005E88EE /* UIImage+LQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LQExtension.m"; sourceTree = "<group>"; };
 		844568741B70569E005E88EE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		844568751B70569E005E88EE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		844568771B70569E005E88EE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		844568781B70569E005E88EE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8445687B1B70569E005E88EE /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		8445687C1B70569E005E88EE /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		8445687D1B70569E005E88EE /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -151,6 +159,60 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		841927071B74A24D00CD6FD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				841927081B74A24D00CD6FD1 /* ViewController.h */,
+				841927091B74A24D00CD6FD1 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8419270B1B74A25500CD6FD1 /* Account(账户户头) */ = {
+			isa = PBXGroup;
+			children = (
+				8419270C1B74A25500CD6FD1 /* Controller */,
+				8419270F1B74A25500CD6FD1 /* View */,
+			);
+			path = "Account(账户户头)";
+			sourceTree = "<group>";
+		};
+		8419270C1B74A25500CD6FD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8419270D1B74A25500CD6FD1 /* LQAccountVC.h */,
+				8419270E1B74A25500CD6FD1 /* LQAccountVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8419270F1B74A25500CD6FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */,
+				841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		841927141B74A27200CD6FD1 /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				841927151B74A28300CD6FD1 /* Controller */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		841927151B74A28300CD6FD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				841927161B74A29400CD6FD1 /* LQLoginVC.h */,
+				841927171B74A29400CD6FD1 /* LQLoginVC.m */,
+				841927181B74A29400CD6FD1 /* LQLoginVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		844568321B7053CE005E88EE = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				844568681B70569E005E88EE /* Main(主要) */,
+				841927141B74A27200CD6FD1 /* Login(登录) */,
+				8419270B1B74A25500CD6FD1 /* Account(账户户头) */,
 				840D29DE1B7205C600DA2155 /* Setting(设置) */,
 			);
 			path = Classes;
@@ -218,10 +282,10 @@
 		844568681B70569E005E88EE /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
-				844568691B70569E005E88EE /* Category */,
-				844568761B70569E005E88EE /* Controller */,
-				844568791B70569E005E88EE /* Lib */,
+				841927071B74A24D00CD6FD1 /* Controller */,
 				844568921B70569E005E88EE /* Other */,
+				844568791B70569E005E88EE /* Lib */,
+				844568691B70569E005E88EE /* Category */,
 			);
 			path = "Main(主要)";
 			sourceTree = "<group>";
@@ -243,17 +307,6 @@
 				844568751B70569E005E88EE /* UIView+Extension.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		844568761B70569E005E88EE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				844568771B70569E005E88EE /* ViewController.h */,
-				844568781B70569E005E88EE /* ViewController.m */,
-				840D29D91B71A5FC00DA2155 /* LQAccountTableViewCell.h */,
-				840D29DA1B71A5FC00DA2155 /* LQAccountTableViewCell.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		844568791B70569E005E88EE /* Lib */ = {
@@ -386,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */,
+				8419271A1B74A29400CD6FD1 /* LQLoginVC.xib in Resources */,
 				8445684F1B7053CF005E88EE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,9 +461,9 @@
 				844568A61B70569E005E88EE /* AppDelegate.m in Sources */,
 				844568AB1B7058B7005E88EE /* NSString+LQExtension.m in Sources */,
 				844568A21B70569E005E88EE /* MASViewConstraint.m in Sources */,
-				8445689C1B70569E005E88EE /* ViewController.m in Sources */,
 				844568A11B70569E005E88EE /* MASViewAttribute.m in Sources */,
 				844568981B70569E005E88EE /* UIButton+LQExtension.m in Sources */,
+				841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */,
 				844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */,
 				8445689D1B70569E005E88EE /* MASCompositeConstraint.m in Sources */,
 				8445689F1B70569E005E88EE /* MASConstraintMaker.m in Sources */,
@@ -418,9 +472,11 @@
 				844568A01B70569E005E88EE /* MASLayoutConstraint.m in Sources */,
 				8445689E1B70569E005E88EE /* MASConstraint.m in Sources */,
 				844568991B70569E005E88EE /* UIColor+LQExtension.m in Sources */,
+				841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */,
 				844568A31B70569E005E88EE /* NSArray+MASAdditions.m in Sources */,
+				8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */,
+				841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */,
 				844568A41B70569E005E88EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				840D29DC1B71A5FC00DA2155 /* LQAccountTableViewCell.m in Sources */,
 				840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */,
 				844568971B70569E005E88EE /* UIBarButtonItem+LQExtension.m in Sources */,
 				8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */,
