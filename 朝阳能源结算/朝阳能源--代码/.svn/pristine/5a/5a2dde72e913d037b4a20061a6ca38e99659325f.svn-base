@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF6E468D-F167-454C-ABA2-37090A181BFA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>朝阳能源结算</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985</key>
+		<string>https://192.168.1.180:8443/svn/CY-NYGK/Source/App/Ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>朝阳能源结算.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985</key>
+		<string>https://192.168.1.180:8443/svn/CY-NYGK</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://192.168.1.180:8443/svn/CY-NYGK/Source/App/Ios/%E6%9C%9D%E9%98%B3%E8%83%BD%E6%BA%90%E7%BB%93%E7%AE%97.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985</string>
+			<key>IDESourceControlWCCName</key>
+			<string>%E6%9C%9D%E9%98%B3%E8%83%BD%E6%BA%90--%E4%BB%A3%E7%A0%81</string>
+		</dict>
+	</array>
+</dict>
+</plist>
