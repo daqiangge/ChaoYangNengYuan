@@ -10,6 +10,7 @@
 #define _______ChaoYang_pch
 
     #import "Masonry.h"
+    #import "LQNavigationController.h"
 
 
     #import "UIView+Extension.h"
@@ -28,6 +29,11 @@
  *  屏幕高
  */
 #define LQScreen_Height ([UIScreen mainScreen].bounds.size.height)
+
+/**
+ *  导航栏高度
+ */
+#define NavigationBar_Height 64
 
 /**
  *  NSLog Debug

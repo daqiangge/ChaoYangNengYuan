@@ -12,4 +12,14 @@
 
 - (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
 
+/**
+ *  设置头像图标
+ */
++ (UIImage *)iconWithimageNamed:(NSString *)name;
+
+/**
+ *  设置头像图标
+ */
++ (UIImage *)iconWithimage:(UIImage *)image;
+
 @end

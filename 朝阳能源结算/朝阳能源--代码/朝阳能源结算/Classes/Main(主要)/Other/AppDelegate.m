@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LQAccountVC.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = [[LQNavigationController alloc] initWithRootViewController:[[LQAccountVC alloc] init]];
     
     [self.window makeKeyAndVisible];
     

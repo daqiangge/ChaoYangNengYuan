@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8408BCC71B75908500C73932 /* CGGeometry+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCBA1B75908500C73932 /* CGGeometry+RSKImageCropper.m */; };
+		8408BCC81B75908500C73932 /* RSKImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCBE1B75908500C73932 /* RSKImageCropViewController.m */; };
+		8408BCC91B75908500C73932 /* RSKImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCC01B75908500C73932 /* RSKImageScrollView.m */; };
+		8408BCCA1B75908500C73932 /* RSKTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCC21B75908500C73932 /* RSKTouchView.m */; };
+		8408BCCB1B75908500C73932 /* UIApplication+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCC41B75908500C73932 /* UIApplication+RSKImageCropper.m */; };
+		8408BCCC1B75908500C73932 /* UIImage+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCC61B75908500C73932 /* UIImage+RSKImageCropper.m */; };
+		8408BCCF1B7597DA00C73932 /* LQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCCE1B7597DA00C73932 /* LQNavigationController.m */; };
 		840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29E31B72062000DA2155 /* LQChangePasswordVC.m */; };
 		840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */; };
 		8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927091B74A24D00CD6FD1 /* ViewController.m */; };
@@ -34,6 +41,7 @@
 		844568A61B70569E005E88EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568941B70569E005E88EE /* AppDelegate.m */; };
 		844568A71B70569E005E88EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568951B70569E005E88EE /* main.m */; };
 		844568AB1B7058B7005E88EE /* NSString+LQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568AA1B7058B7005E88EE /* NSString+LQExtension.m */; };
+		8467C71C1B758706003BD575 /* LQAccountInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467C71B1B758706003BD575 /* LQAccountInformationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8408BCB91B75908500C73932 /* CGGeometry+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+RSKImageCropper.h"; sourceTree = "<group>"; };
+		8408BCBA1B75908500C73932 /* CGGeometry+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+RSKImageCropper.m"; sourceTree = "<group>"; };
+		8408BCBB1B75908500C73932 /* RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropper.h; sourceTree = "<group>"; };
+		8408BCBC1B75908500C73932 /* RSKImageCropViewController+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSKImageCropViewController+Protected.h"; sourceTree = "<group>"; };
+		8408BCBD1B75908500C73932 /* RSKImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropViewController.h; sourceTree = "<group>"; };
+		8408BCBE1B75908500C73932 /* RSKImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageCropViewController.m; sourceTree = "<group>"; };
+		8408BCBF1B75908500C73932 /* RSKImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageScrollView.h; sourceTree = "<group>"; };
+		8408BCC01B75908500C73932 /* RSKImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageScrollView.m; sourceTree = "<group>"; };
+		8408BCC11B75908500C73932 /* RSKTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKTouchView.h; sourceTree = "<group>"; };
+		8408BCC21B75908500C73932 /* RSKTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKTouchView.m; sourceTree = "<group>"; };
+		8408BCC31B75908500C73932 /* UIApplication+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+RSKImageCropper.h"; sourceTree = "<group>"; };
+		8408BCC41B75908500C73932 /* UIApplication+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+RSKImageCropper.m"; sourceTree = "<group>"; };
+		8408BCC51B75908500C73932 /* UIImage+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSKImageCropper.h"; sourceTree = "<group>"; };
+		8408BCC61B75908500C73932 /* UIImage+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSKImageCropper.m"; sourceTree = "<group>"; };
+		8408BCCD1B7597DA00C73932 /* LQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQNavigationController.h; sourceTree = "<group>"; };
+		8408BCCE1B7597DA00C73932 /* LQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQNavigationController.m; sourceTree = "<group>"; };
 		840D29E21B72062000DA2155 /* LQChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQChangePasswordVC.h; sourceTree = "<group>"; };
 		840D29E31B72062000DA2155 /* LQChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChangePasswordVC.m; sourceTree = "<group>"; };
 		840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQChangePasswordVC.xib; sourceTree = "<group>"; };
@@ -105,6 +129,8 @@
 		844568A81B705762005E88EE /* ChaoYang.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaoYang.pch; sourceTree = "<group>"; };
 		844568A91B7058B7005E88EE /* NSString+LQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LQExtension.h"; sourceTree = "<group>"; };
 		844568AA1B7058B7005E88EE /* NSString+LQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LQExtension.m"; sourceTree = "<group>"; };
+		8467C71A1B758706003BD575 /* LQAccountInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountInformationView.h; sourceTree = "<group>"; };
+		8467C71B1B758706003BD575 /* LQAccountInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountInformationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +151,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8408BCB81B75908500C73932 /* RSKImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				8408BCB91B75908500C73932 /* CGGeometry+RSKImageCropper.h */,
+				8408BCBA1B75908500C73932 /* CGGeometry+RSKImageCropper.m */,
+				8408BCBB1B75908500C73932 /* RSKImageCropper.h */,
+				8408BCBC1B75908500C73932 /* RSKImageCropViewController+Protected.h */,
+				8408BCBD1B75908500C73932 /* RSKImageCropViewController.h */,
+				8408BCBE1B75908500C73932 /* RSKImageCropViewController.m */,
+				8408BCBF1B75908500C73932 /* RSKImageScrollView.h */,
+				8408BCC01B75908500C73932 /* RSKImageScrollView.m */,
+				8408BCC11B75908500C73932 /* RSKTouchView.h */,
+				8408BCC21B75908500C73932 /* RSKTouchView.m */,
+				8408BCC31B75908500C73932 /* UIApplication+RSKImageCropper.h */,
+				8408BCC41B75908500C73932 /* UIApplication+RSKImageCropper.m */,
+				8408BCC51B75908500C73932 /* UIImage+RSKImageCropper.h */,
+				8408BCC61B75908500C73932 /* UIImage+RSKImageCropper.m */,
+			);
+			path = RSKImageCropper;
+			sourceTree = "<group>";
+		};
 		840D29DE1B7205C600DA2155 /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +211,8 @@
 			children = (
 				841927081B74A24D00CD6FD1 /* ViewController.h */,
 				841927091B74A24D00CD6FD1 /* ViewController.m */,
+				8408BCCD1B7597DA00C73932 /* LQNavigationController.h */,
+				8408BCCE1B7597DA00C73932 /* LQNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +240,8 @@
 			children = (
 				841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */,
 				841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */,
+				8467C71A1B758706003BD575 /* LQAccountInformationView.h */,
+				8467C71B1B758706003BD575 /* LQAccountInformationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +363,7 @@
 		844568791B70569E005E88EE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				8408BCB81B75908500C73932 /* RSKImageCropper */,
 				8445687A1B70569E005E88EE /* Masonry */,
 			);
 			path = Lib;
@@ -458,21 +510,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8467C71C1B758706003BD575 /* LQAccountInformationView.m in Sources */,
 				844568A61B70569E005E88EE /* AppDelegate.m in Sources */,
 				844568AB1B7058B7005E88EE /* NSString+LQExtension.m in Sources */,
+				8408BCCA1B75908500C73932 /* RSKTouchView.m in Sources */,
 				844568A21B70569E005E88EE /* MASViewConstraint.m in Sources */,
 				844568A11B70569E005E88EE /* MASViewAttribute.m in Sources */,
 				844568981B70569E005E88EE /* UIButton+LQExtension.m in Sources */,
+				8408BCC71B75908500C73932 /* CGGeometry+RSKImageCropper.m in Sources */,
+				8408BCC81B75908500C73932 /* RSKImageCropViewController.m in Sources */,
 				841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */,
 				844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */,
 				8445689D1B70569E005E88EE /* MASCompositeConstraint.m in Sources */,
 				8445689F1B70569E005E88EE /* MASConstraintMaker.m in Sources */,
 				844568A51B70569E005E88EE /* View+MASAdditions.m in Sources */,
+				8408BCCB1B75908500C73932 /* UIApplication+RSKImageCropper.m in Sources */,
+				8408BCCF1B7597DA00C73932 /* LQNavigationController.m in Sources */,
 				844568A71B70569E005E88EE /* main.m in Sources */,
 				844568A01B70569E005E88EE /* MASLayoutConstraint.m in Sources */,
 				8445689E1B70569E005E88EE /* MASConstraint.m in Sources */,
 				844568991B70569E005E88EE /* UIColor+LQExtension.m in Sources */,
 				841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */,
+				8408BCC91B75908500C73932 /* RSKImageScrollView.m in Sources */,
 				844568A31B70569E005E88EE /* NSArray+MASAdditions.m in Sources */,
 				8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */,
 				841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */,
@@ -480,6 +539,7 @@
 				840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */,
 				844568971B70569E005E88EE /* UIBarButtonItem+LQExtension.m in Sources */,
 				8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */,
+				8408BCCC1B75908500C73932 /* UIImage+RSKImageCropper.m in Sources */,
 				8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +602,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "721effb3-19c7-45ec-91a9-61766fb4a88a";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -578,6 +639,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "721effb3-19c7-45ec-91a9-61766fb4a88a";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

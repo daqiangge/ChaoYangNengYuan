@@ -25,7 +25,24 @@
     return [self roundCornersOfImage:image cornerRadius:cornerRadius];
 }
 
-- (UIImage *)roundCornersOfImage:(UIImage *)source cornerRadius:(CGFloat)cornerRadius;
+/**
+ *  设置头像图标
+ */
++ (UIImage *)iconWithimageNamed:(NSString *)name
+{
+    UIImage *image = [UIImage imageNamed:name];
+    return [image roundCornersOfImage:image cornerRadius:image.size.width*0.5];
+}
+
+/**
+ *  设置头像图标
+ */
++ (UIImage *)iconWithimage:(UIImage *)image
+{
+    return [image roundCornersOfImage:image cornerRadius:image.size.width*0.5];
+}
+
+- (UIImage *)roundCornersOfImage:(UIImage *)source cornerRadius:(CGFloat)cornerRadius
 {
     int w = source.size.width;
     int h = source.size.height;
