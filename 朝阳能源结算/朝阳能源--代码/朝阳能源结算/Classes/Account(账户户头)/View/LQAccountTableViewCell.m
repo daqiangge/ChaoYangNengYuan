@@ -8,7 +8,291 @@
 
 #import "LQAccountTableViewCell.h"
 
+@interface LQAccountTableViewCell()
+
+/**
+ *  背景view
+ */
+@property (nonatomic, weak) UIView *backGroundView;
+
+/**
+ *  分割线
+ */
+@property (nonatomic, weak) UIView *lineView;
+
+/**
+ *  冻结提示：“请柜台办理本账户相关业务”
+ */
+@property (nonatomic, weak) UILabel *frozenPromptLable;
+
+/**
+ *  当前示数
+ */
+@property (nonatomic, weak) UILabel *currentReadingsLable;
+
+/**
+ *  本月使用
+ */
+@property (nonatomic, weak) UILabel *monthUseLable;
+
+/**
+ *  表具型号
+ */
+@property (nonatomic, weak) UILabel *modelLable;
+
+/**
+ *  安装地址
+ */
+@property (nonatomic, weak) UILabel *installationAddressLable;
+
+@end
+
+
 @implementation LQAccountTableViewCell
+
+- (UILabel *)nameLable
+{
+    if (_nameLable == nil)
+    {
+        UILabel *lable = [[UILabel alloc] init];
+        lable.font = [UIFont boldSystemFontOfSize:16];
+        lable.textColor = [UIColor blackColor];
+        [self addSubview:lable];
+        
+        [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.backGroundView.mas_left).with.offset(15);
+            make.top.equalTo(self.backGroundView.mas_top).with.offset(0);
+            make.bottom.equalTo(self.lineView.mas_top).with.offset(0);
+            make.width.equalTo(@100);
+        }];
+        
+        _nameLable = lable;
+    }
+    
+    return _nameLable;
+}
+
+- (UILabel *)accountStateLable
+{
+    if (_accountStateLable == nil)
+    {
+        UILabel *lable = [[UILabel alloc] init];
+        lable.font = [UIFont systemFontOfSize:13];
+        lable.textColor = [UIColor whiteColor];
+        lable.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:lable];
+        
+        [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.nameLable.mas_right).with.offset(0);
+            make.centerY.equalTo(self.nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(60, 20));
+        }];
+        
+        _accountStateLable = lable;
+    }
+    
+    return _accountStateLable;
+}
+
+- (UIButton *)rechargeButton
+{
+    if (_rechargeButton == nil)
+    {
+        UIButton *button = [[UIButton alloc] init];
+        [button setTitle:@"充值" forState:UIControlStateNormal];
+        [button setTitleColor:RGB(83, 146, 236) forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont systemFontOfSize:15];
+        button.hidden = YES;
+        [self.backGroundView addSubview:button];
+        button.layer.borderColor = button.titleLabel.textColor.CGColor;
+        button.layer.borderWidth = 3.0;
+        button.layer.cornerRadius = 5;
+        
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.backGroundView.mas_right).with.offset(-10);
+            make.centerY.equalTo(self.nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(60, 30));
+        }];
+        
+        _rechargeButton = button;
+    }
+    
+    return _rechargeButton;
+}
+
+- (UILabel *)frozenPromptLable
+{
+    if (_frozenPromptLable == nil)
+    {
+        UILabel *lable = [[UILabel alloc] init];
+        lable.font = [UIFont systemFontOfSize:13];
+        lable.textAlignment = NSTextAlignmentRight;
+        lable.text = @"请柜台办理相关业务";
+        lable.hidden = YES;
+        [self addSubview:lable];
+        
+        [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.backGroundView.mas_right).with.offset(-10);
+            make.centerY.equalTo(self.nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(180, 30));
+        }];
+        
+        _frozenPromptLable = lable;
+    }
+    
+    return _frozenPromptLable;
+}
+
+- (UILabel *)currentReadingsLable
+{
+    if (_currentReadingsLable == nil)
+    {
+        UILabel *nameLable = [[UILabel alloc] init];
+        nameLable.font = [UIFont systemFontOfSize:13];
+        nameLable.textAlignment = NSTextAlignmentLeft;
+        nameLable.text = @"当前示数：";
+        [self addSubview:nameLable];
+        
+        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.nameLable.mas_left).with.offset(0);
+            make.top.equalTo(self.lineView.mas_bottom).with.offset(12.5);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        UILabel *currentReadingsLable = [[UILabel alloc] init];
+        currentReadingsLable.font = nameLable.font;
+        currentReadingsLable.backgroundColor = [UIColor redColor];
+        currentReadingsLable.textAlignment = nameLable.textAlignment;
+        [self addSubview:currentReadingsLable];
+        
+        [currentReadingsLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(nameLable.mas_right).with.offset(0);
+            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(60, 15));
+        }];
+        
+        _currentReadingsLable = currentReadingsLable;
+    }
+    
+    return _currentReadingsLable;
+}
+
+- (UILabel *)monthUseLable
+{
+    if (_monthUseLable == nil)
+    {
+        UILabel *nameLable = [[UILabel alloc] init];
+        nameLable.font = self.currentReadingsLable.font;
+        nameLable.textAlignment = self.currentReadingsLable.textAlignment;
+        nameLable.text = @"本月使用：";
+        [self addSubview:nameLable];
+        
+        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.nameLable.mas_left).with.offset(0);
+            make.top.equalTo(self.currentReadingsLable.mas_bottom).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        UILabel *monthUseLable = [[UILabel alloc] init];
+        monthUseLable.font = nameLable.font;
+        monthUseLable.textAlignment = nameLable.textAlignment;
+        [self addSubview:monthUseLable];
+        
+        [monthUseLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(nameLable.mas_right).with.offset(0);
+            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        _monthUseLable = monthUseLable;
+    }
+    
+    return _monthUseLable;
+}
+
+- (UILabel *)modelLable
+{
+    if (_modelLable == nil)
+    {
+        UILabel *nameLable = [[UILabel alloc] init];
+        nameLable.font = self.currentReadingsLable.font;
+        nameLable.textAlignment = self.currentReadingsLable.textAlignment;
+        nameLable.text = @"表具型号：";
+        [self addSubview:nameLable];
+        
+        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.nameLable.mas_left).with.offset(0);
+            make.top.equalTo(self.monthUseLable.mas_bottom).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        UILabel *modelLable = [[UILabel alloc] init];
+        modelLable.font = nameLable.font;
+        modelLable.textAlignment = nameLable.textAlignment;
+        [self addSubview:modelLable];
+        
+        [modelLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(nameLable.mas_right).with.offset(0);
+            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        _modelLable = modelLable;
+    }
+    
+    return _modelLable;
+}
+
+- (UILabel *)installationAddressLable
+{
+    if (_installationAddressLable == nil)
+    {
+        UILabel *nameLable = [[UILabel alloc] init];
+        nameLable.font = self.currentReadingsLable.font;
+        nameLable.textAlignment = self.currentReadingsLable.textAlignment;
+        nameLable.text = @"安装地址：";
+        [self addSubview:nameLable];
+        
+        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.nameLable.mas_left).with.offset(0);
+            make.top.equalTo(self.modelLable.mas_bottom).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(70, 15));
+        }];
+        
+        UILabel *installationAddressLable = [[UILabel alloc] init];
+        installationAddressLable.font = nameLable.font;
+        installationAddressLable.textAlignment = nameLable.textAlignment;
+        [self addSubview:installationAddressLable];
+        
+        [installationAddressLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(nameLable.mas_right).with.offset(0);
+            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(220, 15));
+        }];
+        
+        _installationAddressLable = installationAddressLable;
+    }
+    
+    return _installationAddressLable;
+}
+
+- (void)setAccountSatate:(accountSatate)accountSatate
+{
+    if (accountSatate == accountSatateNormal)
+    {
+        self.accountStateLable.backgroundColor = RGB(108, 187, 156);
+        self.accountStateLable.text = @"正常运行";
+        self.rechargeButton.hidden = NO;
+        self.frozenPromptLable.hidden = YES;
+    }else
+    {
+        self.accountStateLable.backgroundColor = RGB(206, 98, 84);
+        self.frozenPromptLable.textColor = self.accountStateLable.backgroundColor;
+        self.accountStateLable.text = @"已冻结";
+        self.rechargeButton.hidden = YES;
+        self.frozenPromptLable.hidden = NO;
+    }
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,14 +308,23 @@
 - (void)doLoading
 {
     UIView *backgroundView = [[UIView alloc] init];
-    backgroundView.frame = CGRectMake(10, 10, self.frame.size.width-20, 80);
-    backgroundView.backgroundColor = [UIColor greenColor];
+    backgroundView.frame = CGRectMake(5, 5, LQScreen_Width - 10, Cell_Height);
+    backgroundView.backgroundColor = [UIColor whiteColor];
     [self addSubview:backgroundView];
-    backgroundView.layer.borderColor = [UIColor clearColor].CGColor;
-    backgroundView.layer.borderWidth = 0.01;
-    backgroundView.layer.cornerRadius = 8;
+    self.backGroundView = backgroundView;
     
+    UIView *lineView = [[UIView alloc] init];
+    lineView.frame = CGRectMake(0, 50, CGRectGetWidth(backgroundView.frame), 1);
+    lineView.backgroundColor = RGB(236, 236, 236);
+    [backgroundView addSubview:lineView];
+    self.lineView = lineView;
     
+    self.nameLable.text = @"水 SY00038";
+    self.accountSatate = accountSatateFrozen;
+    self.currentReadingsLable.text = @"728.74吨";
+    self.monthUseLable.text = @"30.76吨";
+    self.modelLable.text = @"普通水表";
+    self.installationAddressLable.text = @"江苏省无锡市朝阳农贸市场海鲜摊位2-101";
 }
 
 

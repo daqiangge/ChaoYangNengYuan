@@ -21,7 +21,27 @@
 
 @interface LQAccountInformationView : UIView
 
+/**
+ *  头像按钮
+ */
 @property (nonatomic, weak) UIButton *headPortraitBtn;
+
+/**
+ *  用户号码
+ */
+@property (nonatomic, weak) UILabel *numberLable;
+
+/**
+ *  用户名称
+ */
+@property (nonatomic, weak) UILabel *nameLable;
+
+/**
+ *  户头数
+ */
+@property (nonatomic, weak) UILabel *accountNumLable;
+
+
 @property (nonatomic, weak) id<LQAccountInformationViewDelegate> delegate;
 
 + (instancetype)viewWithFrame:(CGRect)frame;

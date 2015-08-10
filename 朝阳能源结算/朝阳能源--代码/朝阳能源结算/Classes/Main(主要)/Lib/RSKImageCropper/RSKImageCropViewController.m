@@ -105,7 +105,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 - (void)viewDidLoad
@@ -135,10 +135,10 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     [super viewWillAppear:animated];
     
     UIApplication *application = [UIApplication rsk_sharedApplication];
-    if (application) {
-        self.originalStatusBarHidden = application.statusBarHidden;
-        [application setStatusBarHidden:YES];
-    }
+//    if (application) {
+//        self.originalStatusBarHidden = application.statusBarHidden;
+//        [application setStatusBarHidden:YES];
+//    }
     
     self.originalNavigationControllerNavigationBarHidden = self.navigationController.navigationBarHidden;
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -160,9 +160,9 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     [super viewWillDisappear:animated];
     
     UIApplication *application = [UIApplication rsk_sharedApplication];
-    if (application) {
-        [application setStatusBarHidden:self.originalStatusBarHidden];
-    }
+//    if (application) {
+//        [application setStatusBarHidden:self.originalStatusBarHidden];
+//    }
     
     [self.navigationController setNavigationBarHidden:self.originalNavigationControllerNavigationBarHidden animated:animated];
     self.navigationController.navigationBar.shadowImage = self.originalNavigationControllerNavigationBarShadowImage;

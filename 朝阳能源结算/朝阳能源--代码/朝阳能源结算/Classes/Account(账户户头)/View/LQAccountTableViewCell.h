@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#define Cell_Height 180.0
+
+typedef enum {
+    accountSatateNormal,//正常使用
+    accountSatateFrozen,//冻结
+}accountSatate;//户头状态
+
 @interface LQAccountTableViewCell : UITableViewCell
+
+@property (nonatomic, weak) UILabel *nameLable;
+@property (nonatomic, weak) UILabel *accountStateLable;
+@property (nonatomic) accountSatate accountSatate;
+@property (nonatomic, weak) UIButton *rechargeButton;
 
 @end

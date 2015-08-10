@@ -16,7 +16,6 @@
 		8408BCCF1B7597DA00C73932 /* LQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408BCCE1B7597DA00C73932 /* LQNavigationController.m */; };
 		840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D29E31B72062000DA2155 /* LQChangePasswordVC.m */; };
 		840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */; };
-		8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927091B74A24D00CD6FD1 /* ViewController.m */; };
 		841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8419270E1B74A25500CD6FD1 /* LQAccountVC.m */; };
 		841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */; };
 		841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927171B74A29400CD6FD1 /* LQLoginVC.m */; };
@@ -74,8 +73,6 @@
 		840D29E21B72062000DA2155 /* LQChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQChangePasswordVC.h; sourceTree = "<group>"; };
 		840D29E31B72062000DA2155 /* LQChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChangePasswordVC.m; sourceTree = "<group>"; };
 		840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQChangePasswordVC.xib; sourceTree = "<group>"; };
-		841927081B74A24D00CD6FD1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		841927091B74A24D00CD6FD1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8419270D1B74A25500CD6FD1 /* LQAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountVC.h; sourceTree = "<group>"; };
 		8419270E1B74A25500CD6FD1 /* LQAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountVC.m; sourceTree = "<group>"; };
 		841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountTableViewCell.h; sourceTree = "<group>"; };
@@ -209,8 +206,6 @@
 		841927071B74A24D00CD6FD1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				841927081B74A24D00CD6FD1 /* ViewController.h */,
-				841927091B74A24D00CD6FD1 /* ViewController.m */,
 				8408BCCD1B7597DA00C73932 /* LQNavigationController.h */,
 				8408BCCE1B7597DA00C73932 /* LQNavigationController.m */,
 			);
@@ -533,7 +528,6 @@
 				841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */,
 				8408BCC91B75908500C73932 /* RSKImageScrollView.m in Sources */,
 				844568A31B70569E005E88EE /* NSArray+MASAdditions.m in Sources */,
-				8419270A1B74A24D00CD6FD1 /* ViewController.m in Sources */,
 				841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */,
 				844568A41B70569E005E88EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */,

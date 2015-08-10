@@ -22,6 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
     self.window.rootViewController = [[LQNavigationController alloc] initWithRootViewController:[[LQAccountVC alloc] init]];
     
     [self.window makeKeyAndVisible];
