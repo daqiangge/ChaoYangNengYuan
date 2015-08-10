@@ -139,7 +139,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LQAccountTableViewCell *cell = [[LQAccountTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    LQAccountTableViewCell *cell = [LQAccountTableViewCell cellWithTableView:tableView];
+    
+    if (indexPath.section == 0) {
+        cell.accountSatate = accountSatateNormal;
+    }else {
+        cell.accountSatate = accountSatateFrozen;
+    }
     
     return cell;
 }

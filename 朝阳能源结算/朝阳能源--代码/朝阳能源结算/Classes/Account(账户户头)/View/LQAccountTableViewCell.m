@@ -45,6 +45,11 @@
  */
 @property (nonatomic, weak) UILabel *installationAddressLable;
 
+/**
+ *  剩余用量
+ */
+@property (nonatomic, weak) UILabel *remainingAmountLable;
+
 @end
 
 
@@ -57,7 +62,7 @@
         UILabel *lable = [[UILabel alloc] init];
         lable.font = [UIFont boldSystemFontOfSize:16];
         lable.textColor = [UIColor blackColor];
-        [self addSubview:lable];
+        [self.backGroundView addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.backGroundView.mas_left).with.offset(15);
@@ -80,7 +85,7 @@
         lable.font = [UIFont systemFontOfSize:13];
         lable.textColor = [UIColor whiteColor];
         lable.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:lable];
+        [self.backGroundView addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.nameLable.mas_right).with.offset(0);
@@ -129,7 +134,7 @@
         lable.textAlignment = NSTextAlignmentRight;
         lable.text = @"请柜台办理相关业务";
         lable.hidden = YES;
-        [self addSubview:lable];
+        [self.backGroundView addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.backGroundView.mas_right).with.offset(-10);
@@ -151,24 +156,23 @@
         nameLable.font = [UIFont systemFontOfSize:13];
         nameLable.textAlignment = NSTextAlignmentLeft;
         nameLable.text = @"当前示数：";
-        [self addSubview:nameLable];
+        [self.backGroundView addSubview:nameLable];
         
         [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.nameLable.mas_left).with.offset(0);
-            make.top.equalTo(self.lineView.mas_bottom).with.offset(12.5);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.top.equalTo(self.lineView.mas_bottom).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(65, 13));
         }];
         
         UILabel *currentReadingsLable = [[UILabel alloc] init];
         currentReadingsLable.font = nameLable.font;
-        currentReadingsLable.backgroundColor = [UIColor redColor];
         currentReadingsLable.textAlignment = nameLable.textAlignment;
-        [self addSubview:currentReadingsLable];
+        [self.backGroundView addSubview:currentReadingsLable];
         
         [currentReadingsLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(nameLable.mas_right).with.offset(0);
             make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(60, 15));
+            make.size.mas_equalTo(CGSizeMake(60, 13));
         }];
         
         _currentReadingsLable = currentReadingsLable;
@@ -185,23 +189,23 @@
         nameLable.font = self.currentReadingsLable.font;
         nameLable.textAlignment = self.currentReadingsLable.textAlignment;
         nameLable.text = @"本月使用：";
-        [self addSubview:nameLable];
+        [self.backGroundView addSubview:nameLable];
         
         [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.nameLable.mas_left).with.offset(0);
             make.top.equalTo(self.currentReadingsLable.mas_bottom).with.offset(15);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.size.mas_equalTo(CGSizeMake(65, 13));
         }];
         
         UILabel *monthUseLable = [[UILabel alloc] init];
         monthUseLable.font = nameLable.font;
         monthUseLable.textAlignment = nameLable.textAlignment;
-        [self addSubview:monthUseLable];
+        [self.backGroundView addSubview:monthUseLable];
         
         [monthUseLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(nameLable.mas_right).with.offset(0);
             make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.size.mas_equalTo(CGSizeMake(60, 13));
         }];
         
         _monthUseLable = monthUseLable;
@@ -218,23 +222,23 @@
         nameLable.font = self.currentReadingsLable.font;
         nameLable.textAlignment = self.currentReadingsLable.textAlignment;
         nameLable.text = @"表具型号：";
-        [self addSubview:nameLable];
+        [self.backGroundView addSubview:nameLable];
         
         [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.nameLable.mas_left).with.offset(0);
             make.top.equalTo(self.monthUseLable.mas_bottom).with.offset(15);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.size.mas_equalTo(CGSizeMake(65, 13));
         }];
         
         UILabel *modelLable = [[UILabel alloc] init];
         modelLable.font = nameLable.font;
         modelLable.textAlignment = nameLable.textAlignment;
-        [self addSubview:modelLable];
+        [self.backGroundView addSubview:modelLable];
         
         [modelLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(nameLable.mas_right).with.offset(0);
             make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.size.mas_equalTo(CGSizeMake(60, 13));
         }];
         
         _modelLable = modelLable;
@@ -251,23 +255,23 @@
         nameLable.font = self.currentReadingsLable.font;
         nameLable.textAlignment = self.currentReadingsLable.textAlignment;
         nameLable.text = @"安装地址：";
-        [self addSubview:nameLable];
+        [self.backGroundView addSubview:nameLable];
         
         [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.nameLable.mas_left).with.offset(0);
             make.top.equalTo(self.modelLable.mas_bottom).with.offset(15);
-            make.size.mas_equalTo(CGSizeMake(70, 15));
+            make.size.mas_equalTo(CGSizeMake(65, 13));
         }];
         
         UILabel *installationAddressLable = [[UILabel alloc] init];
         installationAddressLable.font = nameLable.font;
         installationAddressLable.textAlignment = nameLable.textAlignment;
-        [self addSubview:installationAddressLable];
+        [self.backGroundView addSubview:installationAddressLable];
         
         [installationAddressLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(nameLable.mas_right).with.offset(0);
             make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(220, 15));
+            make.size.mas_equalTo(CGSizeMake(220, 13));
         }];
         
         _installationAddressLable = installationAddressLable;
@@ -276,12 +280,46 @@
     return _installationAddressLable;
 }
 
+- (UILabel *)remainingAmountLable
+{
+    if (_remainingAmountLable == nil)
+    {
+        UILabel *nameLable = [[UILabel alloc] init];
+        nameLable.font = [UIFont systemFontOfSize:13];
+        nameLable.textAlignment = NSTextAlignmentRight;
+        nameLable.text = @"剩余用量";
+        [self.backGroundView addSubview:nameLable];
+        
+        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.rechargeButton.mas_right).with.offset(0);
+            make.centerY.equalTo(self.currentReadingsLable.mas_centerY).with.offset(0);
+            make.size.mas_equalTo(CGSizeMake(70, 13));
+        }];
+        
+        UILabel *remainingAmountLable = [[UILabel alloc] init];
+        remainingAmountLable.font = [UIFont boldSystemFontOfSize:25];
+        remainingAmountLable.textAlignment = nameLable.textAlignment;
+        [self.backGroundView addSubview:remainingAmountLable];
+        
+        [remainingAmountLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(nameLable.mas_right).with.offset(0);
+            make.top.equalTo(nameLable.mas_bottom).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(100, 25));
+        }];
+        
+        _remainingAmountLable = remainingAmountLable;
+    }
+    
+    return _remainingAmountLable;
+}
+
 - (void)setAccountSatate:(accountSatate)accountSatate
 {
     if (accountSatate == accountSatateNormal)
     {
         self.accountStateLable.backgroundColor = RGB(108, 187, 156);
         self.accountStateLable.text = @"正常运行";
+        self.remainingAmountLable.textColor = [UIColor blackColor];
         self.rechargeButton.hidden = NO;
         self.frozenPromptLable.hidden = YES;
     }else
@@ -289,6 +327,7 @@
         self.accountStateLable.backgroundColor = RGB(206, 98, 84);
         self.frozenPromptLable.textColor = self.accountStateLable.backgroundColor;
         self.accountStateLable.text = @"已冻结";
+        self.remainingAmountLable.textColor = self.accountStateLable.backgroundColor;
         self.rechargeButton.hidden = YES;
         self.frozenPromptLable.hidden = NO;
     }
@@ -319,23 +358,24 @@
     [backgroundView addSubview:lineView];
     self.lineView = lineView;
     
-    self.nameLable.text = @"水 SY00038";
-    self.accountSatate = accountSatateFrozen;
-    self.currentReadingsLable.text = @"728.74吨";
-    self.monthUseLable.text = @"30.76吨";
-    self.modelLable.text = @"普通水表";
-    self.installationAddressLable.text = @"江苏省无锡市朝阳农贸市场海鲜摊位2-101";
 }
 
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
++ (LQAccountTableViewCell *)cellWithTableView:(UITableView *)tableView
+{
+    LQAccountTableViewCell *cell = [[LQAccountTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    cell.nameLable.text = @"水 SY00038";
+    cell.accountSatate = accountSatateFrozen;
+    cell.currentReadingsLable.text = @"728.74吨";
+    cell.monthUseLable.text = @"30.76吨";
+    cell.modelLable.text = @"普通水表";
+    cell.installationAddressLable.text = @"江苏无锡朝阳农贸市场海鲜摊位2-101";
+    cell.remainingAmountLable.text = @"52.94吨";
+    
+    return cell;
 }
 
 @end

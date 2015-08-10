@@ -22,4 +22,6 @@ typedef enum {
 @property (nonatomic) accountSatate accountSatate;
 @property (nonatomic, weak) UIButton *rechargeButton;
 
++ (LQAccountTableViewCell *)cellWithTableView:(UITableView *)tableView;
+
 @end
