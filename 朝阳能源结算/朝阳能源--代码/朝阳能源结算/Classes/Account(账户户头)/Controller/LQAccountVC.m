@@ -10,6 +10,7 @@
 #import "RSKImageCropper.h"
 #import "LQAccountInformationView.h"
 #import "LQAccountTableViewCell.h"
+#import "LQAccountDetailsVC.h"
 
 @interface LQAccountVC ()<LQAccountInformationViewDelegate,RSKImageCropViewControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -153,6 +154,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    LQAccountDetailsVC *accountDetailVC = [[LQAccountDetailsVC alloc] init];
+    [self.navigationController pushViewController:accountDetailVC animated:YES];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section

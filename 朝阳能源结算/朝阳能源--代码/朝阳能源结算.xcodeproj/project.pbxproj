@@ -41,6 +41,10 @@
 		844568A71B70569E005E88EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568951B70569E005E88EE /* main.m */; };
 		844568AB1B7058B7005E88EE /* NSString+LQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844568AA1B7058B7005E88EE /* NSString+LQExtension.m */; };
 		8467C71C1B758706003BD575 /* LQAccountInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467C71B1B758706003BD575 /* LQAccountInformationView.m */; };
+		84D11AAB1B797EBE00A5096F /* LQAccountDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AAA1B797EBE00A5096F /* LQAccountDetailsVC.m */; };
+		84D11AAE1B79809D00A5096F /* LQAccountDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */; };
+		84D11AB11B799AC700A5096F /* LQAccountBillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AB01B799AC700A5096F /* LQAccountBillView.m */; };
+		84D11AB41B79E92600A5096F /* LQRechargeRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +132,14 @@
 		844568AA1B7058B7005E88EE /* NSString+LQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LQExtension.m"; sourceTree = "<group>"; };
 		8467C71A1B758706003BD575 /* LQAccountInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountInformationView.h; sourceTree = "<group>"; };
 		8467C71B1B758706003BD575 /* LQAccountInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountInformationView.m; sourceTree = "<group>"; };
+		84D11AA91B797EBE00A5096F /* LQAccountDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountDetailsVC.h; sourceTree = "<group>"; };
+		84D11AAA1B797EBE00A5096F /* LQAccountDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountDetailsVC.m; sourceTree = "<group>"; };
+		84D11AAC1B79809D00A5096F /* LQAccountDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountDetailsView.h; sourceTree = "<group>"; };
+		84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountDetailsView.m; sourceTree = "<group>"; };
+		84D11AAF1B799AC700A5096F /* LQAccountBillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountBillView.h; sourceTree = "<group>"; };
+		84D11AB01B799AC700A5096F /* LQAccountBillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountBillView.m; sourceTree = "<group>"; };
+		84D11AB21B79E92600A5096F /* LQRechargeRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRechargeRecordTableViewCell.h; sourceTree = "<group>"; };
+		84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRechargeRecordTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +238,8 @@
 			children = (
 				8419270D1B74A25500CD6FD1 /* LQAccountVC.h */,
 				8419270E1B74A25500CD6FD1 /* LQAccountVC.m */,
+				84D11AA91B797EBE00A5096F /* LQAccountDetailsVC.h */,
+				84D11AAA1B797EBE00A5096F /* LQAccountDetailsVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,10 +247,16 @@
 		8419270F1B74A25500CD6FD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */,
-				841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */,
 				8467C71A1B758706003BD575 /* LQAccountInformationView.h */,
 				8467C71B1B758706003BD575 /* LQAccountInformationView.m */,
+				841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */,
+				841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */,
+				84D11AAC1B79809D00A5096F /* LQAccountDetailsView.h */,
+				84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */,
+				84D11AAF1B799AC700A5096F /* LQAccountBillView.h */,
+				84D11AB01B799AC700A5096F /* LQAccountBillView.m */,
+				84D11AB21B79E92600A5096F /* LQRechargeRecordTableViewCell.h */,
+				84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +535,7 @@
 				8408BCC71B75908500C73932 /* CGGeometry+RSKImageCropper.m in Sources */,
 				8408BCC81B75908500C73932 /* RSKImageCropViewController.m in Sources */,
 				841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */,
+				84D11AB41B79E92600A5096F /* LQRechargeRecordTableViewCell.m in Sources */,
 				844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */,
 				8445689D1B70569E005E88EE /* MASCompositeConstraint.m in Sources */,
 				8445689F1B70569E005E88EE /* MASConstraintMaker.m in Sources */,
@@ -533,7 +554,10 @@
 				840D29E51B72062000DA2155 /* LQChangePasswordVC.m in Sources */,
 				844568971B70569E005E88EE /* UIBarButtonItem+LQExtension.m in Sources */,
 				8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */,
+				84D11AAE1B79809D00A5096F /* LQAccountDetailsView.m in Sources */,
 				8408BCCC1B75908500C73932 /* UIImage+RSKImageCropper.m in Sources */,
+				84D11AB11B799AC700A5096F /* LQAccountBillView.m in Sources */,
+				84D11AAB1B797EBE00A5096F /* LQAccountDetailsVC.m in Sources */,
 				8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
