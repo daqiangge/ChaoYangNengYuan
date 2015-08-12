@@ -24,14 +24,14 @@
     if (_contentLable == nil)
     {
         UILabel *lable = [[UILabel alloc] init];
-        lable.numberOfLines = 2;
+        lable.numberOfLines = 3;
         lable.textColor = [UIColor blackColor];
-        lable.font = [UIFont systemFontOfSize:15];
+        lable.font = [UIFont systemFontOfSize:13];
         [self addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.and.bottom.equalTo(self);
-            make.right.equalTo(self.paymentMethodLable.mas_left).with.offset(5);
+            make.right.equalTo(self.paymentMethodLable.mas_left).with.offset(-10);
             make.left.equalTo(self.mas_left).with.offset(15);
         }];
         
@@ -48,13 +48,14 @@
     {
         UILabel *lable = [[UILabel alloc] init];
         lable.textColor = [UIColor blackColor];
-        lable.font = [UIFont systemFontOfSize:15];
+        lable.font = [UIFont systemFontOfSize:13];
+        lable.textAlignment = NSTextAlignmentLeft;
         [self addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top).with.offset(10);
-            make.right.equalTo(self.mas_right).with.offset(-45);
-            make.size.mas_equalTo(CGSizeMake(50, 15));
+            make.right.equalTo(self.moneyLable.mas_left);
+            make.size.mas_equalTo(CGSizeMake(30, 14));
         }];
         
         
@@ -68,8 +69,19 @@
 {
     if (_moneyLable == nil)
     {
+        UILabel *lable = [[UILabel alloc] init];
+        lable.textColor = RGB(202, 108, 25);
+        lable.font = [UIFont systemFontOfSize:13];
+        lable.textAlignment = NSTextAlignmentRight;
+        [self addSubview:lable];
         
+        [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mas_top).with.offset(10);
+            make.right.equalTo(self.mas_right).with.offset(-15);
+            make.size.mas_equalTo(CGSizeMake(42, 14));
+        }];
         
+        _moneyLable = lable;
     }
     
     return _moneyLable;
@@ -81,13 +93,14 @@
     {
         UILabel *lable = [[UILabel alloc] init];
         lable.textColor = [UIColor blackColor];
-        lable.font = [UIFont systemFontOfSize:15];
+        lable.font = [UIFont systemFontOfSize:13];
+        lable.textAlignment = NSTextAlignmentRight;
         [self addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.mas_bottom).with.offset(-10);
             make.right.equalTo(self.mas_right).with.offset(-15);
-            make.size.mas_equalTo(CGSizeMake(80, 15));
+            make.size.mas_equalTo(CGSizeMake(80, 14));
         }];
         
         _dateLable = lable;
@@ -108,8 +121,9 @@
 
 - (void)doLoading
 {
-    self.contentLable.text = @"充值前示数12.33度，充值前剩余金额23.00元，充值后剩余金额123.00元";
+    self.contentLable.text =@"充值前示数12.33度，充值前剩余金额23.00元，充值后剩余金额123.00元";
     self.paymentMethodLable.text = @"自助";
+    self.moneyLable.text = @"￥100";
     self.dateLable.text = @"2015-07-09";
 }
 

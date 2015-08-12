@@ -53,7 +53,7 @@
 /**
  *  表具型号
  */
-@property (nonatomic, weak) UILabel *meterModelLable;
+//@property (nonatomic, weak) UILabel *meterModelLable;
 
 /**
  *  安装地址
@@ -234,7 +234,6 @@
 {
     if (_yearCumulativeLable == nil)
     {
-        
         UILabel *nameLable = [[UILabel alloc] init];
         nameLable.font = self.currentReadingsLable.font;
         nameLable.textAlignment = self.currentReadingsLable.textAlignment;
@@ -288,7 +287,7 @@
         [meterNumberLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(nameLable.mas_right).with.offset(0);
             make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(60, 13));
+            make.size.mas_equalTo(CGSizeMake(110, 13));
         }];
         
         _meterNumberLable = meterNumberLable;
@@ -297,38 +296,38 @@
     return _meterNumberLable;
 }
 
-- (UILabel *)meterModelLable
-{
-    if (_meterModelLable == nil)
-    {
-        UILabel *nameLable = [[UILabel alloc] init];
-        nameLable.font = self.currentReadingsLable.font;
-        nameLable.textAlignment = self.currentReadingsLable.textAlignment;
-        nameLable.text = @"表具型号：";
-        [self addSubview:nameLable];
-        
-        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.meterNumberLable.mas_right).with.offset(10);
-            make.centerY.equalTo(self.meterNumberLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(65, 13));
-        }];
-        
-        UILabel *meterModelLable = [[UILabel alloc] init];
-        meterModelLable.font = nameLable.font;
-        meterModelLable.textAlignment = nameLable.textAlignment;
-        [self addSubview:meterModelLable];
-        
-        [meterModelLable mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(nameLable.mas_right).with.offset(0);
-            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
-            make.size.mas_equalTo(CGSizeMake(60, 13));
-        }];
-        
-        _meterModelLable = meterModelLable;
-    }
-    
-    return _meterModelLable;
-}
+//- (UILabel *)meterModelLable
+//{
+//    if (_meterModelLable == nil)
+//    {
+//        UILabel *nameLable = [[UILabel alloc] init];
+//        nameLable.font = self.currentReadingsLable.font;
+//        nameLable.textAlignment = self.currentReadingsLable.textAlignment;
+//        nameLable.text = @"表具型号：";
+//        [self addSubview:nameLable];
+//        
+//        [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self.meterNumberLable.mas_right).with.offset(10);
+//            make.centerY.equalTo(self.meterNumberLable.mas_centerY).with.offset(0);
+//            make.size.mas_equalTo(CGSizeMake(65, 13));
+//        }];
+//        
+//        UILabel *meterModelLable = [[UILabel alloc] init];
+//        meterModelLable.font = nameLable.font;
+//        meterModelLable.textAlignment = nameLable.textAlignment;
+//        [self addSubview:meterModelLable];
+//        
+//        [meterModelLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(nameLable.mas_right).with.offset(0);
+//            make.centerY.equalTo(nameLable.mas_centerY).with.offset(0);
+//            make.size.mas_equalTo(CGSizeMake(60, 13));
+//        }];
+//        
+//        _meterModelLable = meterModelLable;
+//    }
+//    
+//    return _meterModelLable;
+//}
 
 - (UILabel *)installationAddressLable
 {
@@ -416,6 +415,7 @@
     }
 }
 
+#pragma mark -
 + (instancetype)accountDetailsViewWithFrame:(CGRect)frame
 {
     return [[self alloc] initWithFrame:frame];
@@ -446,8 +446,7 @@
     self.currentReadingsLable.text = @"728.74吨";
     self.monthUseLable.text = @"30.76吨";
     self.yearCumulativeLable.text = @"900.76吨";
-    self.meterNumberLable.text = @"CY0001";
-    self.meterModelLable.text = @"普通水表";
+    self.meterNumberLable.text = @"CY0001(普通水表)";
     self.installationAddressLable.text = @"江苏无锡朝阳农贸市场海鲜摊位2-101";
     self.remainingAmountLable.text = @"52.94吨";
 

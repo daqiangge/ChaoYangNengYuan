@@ -19,6 +19,8 @@
 #import "LQAccountBillView.h"
 #import "LQRechargeRecordTableViewCell.h"
 
+#define RechargeRecordBtn_Height 40
+
 @interface LQAccountBillView()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, weak) UIView *lineView;
@@ -64,7 +66,7 @@
         [_rechargeRecordBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
             make.left.equalTo(self.mas_left);
-            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, 40));
+            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, RechargeRecordBtn_Height));
         }];
     }
     
@@ -80,7 +82,7 @@
         [_monthAnalysisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
             make.left.equalTo(self.rechargeRecordBtn.mas_right);
-            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, 40));
+            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, RechargeRecordBtn_Height));
         }];
     }
     
@@ -91,12 +93,12 @@
 {
     if (_yearAnalysisBtn == nil)
     {
-        _yearAnalysisBtn = [self buttonWithTitle:@"月用能分析" action:@selector(rechargeRecordBtn:)];
+        _yearAnalysisBtn = [self buttonWithTitle:@"年用能分析" action:@selector(rechargeRecordBtn:)];
         
         [_yearAnalysisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
             make.left.equalTo(self.monthAnalysisBtn.mas_right);
-            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, 40));
+            make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, RechargeRecordBtn_Height));
         }];
     }
     
@@ -109,6 +111,7 @@
     {
         UIScrollView *scrollView = [[UIScrollView alloc] init];
         scrollView.backgroundColor = [UIColor redColor];
+        scrollView.pagingEnabled = YES;
         [self addSubview:scrollView];
         
         [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {

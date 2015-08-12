@@ -19,6 +19,7 @@
     #import "NSString+LQExtension.h"
     #import "UIImage+LQExtension.h"
     #import "UIColor+LQExtension.h"
+    #import "UILabel+LQExtension.h"
 
 /**
  *  屏幕宽

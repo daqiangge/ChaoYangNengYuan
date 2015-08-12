@@ -21,7 +21,7 @@
 #import "LQAccountBillView.h"
 
 #define AccountDetailsView_Height 171
-#define AccountBillView_Height (LQScreen_Height-AccountDetailsView_Height)
+#define AccountBillView_Height (LQScreen_Height-AccountDetailsView_Height-NavigationBar_Height)
 
 @interface LQAccountDetailsVC ()
 
