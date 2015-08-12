@@ -1,0 +1,25 @@
+//
+//  LQAccountDetailsView.h
+//  朝阳能源结算
+//
+//  Created by admin on 15/8/11.
+//  Copyright (c) 2015年 dieshang. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef enum {
+    accountSatateNormal,//正常使用
+    accountSatateFrozen,//冻结
+}accountSatate;//户头状态
+
+@interface LQAccountDetailsView : UIView
+
+@property (nonatomic, weak) UILabel *nameLable;
+@property (nonatomic, weak) UILabel *accountStateLable;
+@property (nonatomic) accountSatate accountSatate;
+@property (nonatomic, weak) UIButton *rechargeButton;
+
++ (instancetype)accountDetailsViewWithFrame:(CGRect)frame;
+
+@end
