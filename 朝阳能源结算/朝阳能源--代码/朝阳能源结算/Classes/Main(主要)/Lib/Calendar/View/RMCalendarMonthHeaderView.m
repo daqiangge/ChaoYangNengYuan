@@ -8,8 +8,8 @@
 
 #import "RMCalendarMonthHeaderView.h"
 
-#define CATDayLabelWidth  ([UIScreen mainScreen].bounds.size.width/7)
-#define CATDayLabelHeight 20.0f
+#define CATDayLabelWidth  ((LQScreen_Width-20)/7)
+#define CATDayLabelHeight 30.0f
 
 #define COLOR_THEME1 ([UIColor redColor])
 #define COLOR_THEME ([UIColor colorWithRed:26/256.0  green:168/256.0 blue:186/256.0 alpha:1])
@@ -40,19 +40,19 @@
 
 - (void)initWithHeader
 {
-    self.clipsToBounds = YES;
-    CGFloat headerWidth = [UIScreen mainScreen].bounds.size.width;
+//    self.clipsToBounds = YES;
+//    CGFloat headerWidth = [UIScreen mainScreen].bounds.size.width;
     //月份
-    UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 10.0f, headerWidth, 30.f)];
-    [masterLabel setTextAlignment:NSTextAlignmentCenter];
-    [masterLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]];
-    self.masterLabel = masterLabel;
-    self.masterLabel.textColor = COLOR_THEME;
-    [self addSubview:self.masterLabel];
-    CGFloat yOffset = 45.0f;
+//    UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 10.0f, headerWidth, 30.f)];
+//    [masterLabel setTextAlignment:NSTextAlignmentCenter];
+//    [masterLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:17.0f]];
+//    self.masterLabel = masterLabel;
+//    self.masterLabel.textColor = COLOR_THEME;
+//    [self addSubview:self.masterLabel];
+//    CGFloat yOffset = 45.0f;
     NSArray *textArray = @[@"日", @"一", @"二", @"三", @"四", @"五", @"六"];
     for (int i = 0; i < textArray.count; i++) {
-        [self initHeaderWeekText:textArray[i] titleColor:COLOR_THEME x:CATDayLabelWidth * i y:yOffset];
+        [self initHeaderWeekText:textArray[i] titleColor:COLOR_THEME x:CATDayLabelWidth * i y:0];
     }
     
 }

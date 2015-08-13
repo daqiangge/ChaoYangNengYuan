@@ -47,7 +47,10 @@
     return self;
 }
 
-- (void)initCellView {
+- (void)initCellView
+{
+    self.layer.borderColor = Layer_BorderColor;
+    self.layer.borderWidth = 0.5;
     
     //选中时显示的图片
     UIImageView *selectImageView = [[UIImageView alloc]initWithFrame:self.bounds];

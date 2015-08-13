@@ -12,5 +12,6 @@
 
 - (void)setBackgroundImageAndTitlePositionRelationWithUpDownSpace:(CGFloat)space;
 - (void)setBackgroundImageAndTitlePositionRelationWithLeftRightSpace:(CGFloat)space;
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
 
 @end

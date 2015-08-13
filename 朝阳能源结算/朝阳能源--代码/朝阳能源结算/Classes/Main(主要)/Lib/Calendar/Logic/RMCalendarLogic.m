@@ -98,10 +98,8 @@
         NSMutableArray *calendarDays = [[NSMutableArray alloc]init];
         [self calculateDaysInPreviousMonthWithDate:month andArray:calendarDays];
         [self calculateDaysInCurrentMonthWithDate:month andArray:calendarDays];
-        if (type == CalendarShowTypeMultiple) {
-            [self calculateDaysInFollowingMonthWithDate:month andArray:calendarDays];//计算下月份的天数
-        }
-            
+        [self calculateDaysInFollowingMonthWithDate:month andArray:calendarDays];//计算下月份的天数
+
         [calendarMonth insertObject:calendarDays atIndex:0];
     }else
     {
@@ -140,7 +138,6 @@
         calendarDay.style = CellDayTypeEmpty;//不显示
         [array addObject:calendarDay];
     }
-    
     
     return NULL;
 }
@@ -184,9 +181,6 @@
         [array addObject:calendarDay];
     }
 }
-
-
-
 
 - (void)changStyle:(RMCalendarModel *)model
 {

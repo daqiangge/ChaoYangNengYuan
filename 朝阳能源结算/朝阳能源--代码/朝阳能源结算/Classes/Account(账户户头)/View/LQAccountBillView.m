@@ -18,10 +18,12 @@
 
 #import "LQAccountBillView.h"
 #import "LQRechargeRecordTableViewCell.h"
+#import "LQCalendarView.h"
+#import "LQChooseMonthBtnGroup.h"
 
 #define RechargeRecordBtn_Height 40
 
-@interface LQAccountBillView()<UITableViewDataSource,UITableViewDelegate>
+@interface LQAccountBillView()<UITableViewDataSource,UITableViewDelegate,LQChooseMonthBtnGroupDelegate>
 
 @property (nonatomic, weak) UIView *lineView;
 @property (nonatomic, weak) UIButton *rechargeRecordBtn;
@@ -32,6 +34,8 @@
 @property (nonatomic, weak) UITableView *rechargeRecordTableView;
 @property (nonatomic, weak) UIView *monthAnalysisView;
 @property (nonatomic, weak) UIView *yearAnalysisView;
+@property (nonatomic, weak) LQCalendarView *calendar;
+@property (nonatomic, weak) LQChooseMonthBtnGroup *chooseMonthBtnGroupView;
 
 @end
 
@@ -67,6 +71,24 @@
             make.top.equalTo(self.mas_top);
             make.left.equalTo(self.mas_left);
             make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3, RechargeRecordBtn_Height));
+        }];
+        
+        //画分割线
+        UIView *dividingLine1 = [[UIView alloc] init];
+        dividingLine1.backgroundColor = RGB(236, 236, 236);
+        [self addSubview:dividingLine1];
+        [dividingLine1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.and.right.equalTo(self);
+            make.bottom.equalTo(self.rechargeRecordBtn.mas_bottom);
+            make.height.equalTo(@1);
+        }];
+        UIView *dividingLine2 = [[UIView alloc] init];
+        dividingLine2.backgroundColor = dividingLine1.backgroundColor;
+        [self addSubview:dividingLine2];
+        [dividingLine2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.and.right.equalTo(self);
+            make.top.equalTo(self.rechargeRecordBtn.mas_top);
+            make.height.equalTo(@1);
         }];
     }
     
@@ -110,7 +132,6 @@
     if (_scrollView == nil)
     {
         UIScrollView *scrollView = [[UIScrollView alloc] init];
-        scrollView.backgroundColor = [UIColor redColor];
         scrollView.pagingEnabled = YES;
         [self addSubview:scrollView];
         
@@ -153,7 +174,6 @@
         UITableView *tableView = [[UITableView alloc] init];
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.backgroundColor = [UIColor grayColor];
         [self.scrollBackgroundView addSubview:tableView];
         
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -174,7 +194,6 @@
     if (_monthAnalysisView == nil)
     {
         UIView *view = [[UIView alloc] init];
-        view.backgroundColor = [UIColor greenColor];
         [self.scrollBackgroundView addSubview:view];
         
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -209,6 +228,59 @@
     }
     
     return _yearAnalysisView;
+}
+
+- (LQChooseMonthBtnGroup *)chooseMonthBtnGroupView
+{
+    if (_chooseMonthBtnGroupView == nil)
+    {
+        LQChooseMonthBtnGroup *view = [LQChooseMonthBtnGroup chooseMonthBtnGroupWithFrame:CGRectZero];
+        view.delegate = self;
+        [self.scrollBackgroundView addSubview:view];
+        
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.scrollBackgroundView.mas_top);
+            make.left.equalTo(self.rechargeRecordTableView.mas_right);
+            make.right.equalTo(self.yearAnalysisView.mas_left);
+            make.height.equalTo(@40);
+        }];
+        
+        _chooseMonthBtnGroupView = view;
+    }
+    
+    return _chooseMonthBtnGroupView;
+}
+
+- (LQCalendarView *)calendar
+{
+    if (_calendar == nil)
+    {
+        LQCalendarView *calendar = [LQCalendarView calendarWithDays:-190 showType:CalendarShowTypeSingle singleShowMonth:0 frame:CGRectZero];
+        calendar.isEnable = YES;
+        calendar.calendarBlock = ^(RMCalendarModel *model) {
+            if (model.ticketModel) {
+                NSLog(@"%lu-%lu-%lu-票价%.1f",(unsigned long)model.year,(unsigned long)model.month,(unsigned long)model.day, model.ticketModel.ticketPrice);
+            } else {
+                NSLog(@"%lu-%lu-%lu",(unsigned long)model.year,(unsigned long)model.month,(unsigned long)model.day);
+            }
+        };
+        
+        calendar.layer.borderColor = Layer_BorderColor;
+        calendar.layer.borderWidth = 1;
+        
+        [self.scrollBackgroundView addSubview:calendar];
+        
+        [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.chooseMonthBtnGroupView.mas_bottom).with.offset(0);
+            make.bottom.equalTo(self.scrollBackgroundView.mas_bottom).with.offset(-10);
+            make.left.equalTo(self.rechargeRecordTableView.mas_right).with.offset(10);
+            make.right.equalTo(self.yearAnalysisView.mas_left).with.offset(-10);
+        }];
+        
+        _calendar = calendar;
+    }
+    
+    return _calendar;
 }
 
 - (UIButton *)buttonWithTitle:(NSString *)title action:(SEL)action
@@ -249,6 +321,25 @@
     self.monthAnalysisView.hidden = NO;
     self.yearAnalysisView.hidden = NO;
     
+    [self loadingCalendar];
+    
+}
+
+- (void)loadingCalendar
+{
+    // 此处用到MJ大神开发的框架，根据自己需求调整是否需要
+    self.calendar.modelArr = [TicketModel objectArrayWithKeyValuesArray:@[@{@"year":@2015, @"month":@8, @"day":@10,
+                                                                       @"ticketCount":@194, @"ticketPrice":@283},
+                                                                     @{@"year":@2015, @"month":@9, @"day":@7,
+                                                                       @"ticketCount":@91, @"ticketPrice":@223},
+                                                                     @{@"year":@2015, @"month":@10, @"day":@4,
+                                                                       @"ticketCount":@91, @"ticketPrice":@23},
+                                                                     @{@"year":@2015, @"month":@7, @"day":@8,
+                                                                       @"ticketCount":@2, @"ticketPrice":@203},
+                                                                     @{@"year":@2015, @"month":@8, @"day":@28,
+                                                                       @"ticketCount":@2, @"ticketPrice":@103},
+                                                                     @{@"year":@2015, @"month":@8, @"day":@18,
+                                                                       @"ticketCount":@0, @"ticketPrice":@153}]]; //最后一条数据ticketCount 为0时不显示
 }
 
 /**
@@ -279,6 +370,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return RechargeRecordCell_Height;
+}
+
+#pragma mark - LQChooseMonthBtnGroupDelegate
+- (void)chooseMonthBtnGroupDidClickBtnWithView:(LQChooseMonthBtnGroup *)view button:(UIButton *)btn
+{
+    [self.calendar changeSingleShowMonth:(int)btn.tag-100];
 }
 
 @end
