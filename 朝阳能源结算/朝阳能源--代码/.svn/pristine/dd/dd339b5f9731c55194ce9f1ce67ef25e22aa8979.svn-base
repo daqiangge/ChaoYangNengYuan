@@ -20,7 +20,6 @@
 #import "LQRechargeRecordTableViewCell.h"
 #import "LQCalendarView.h"
 #import "LQChooseMonthBtnGroup.h"
-#import "LQYearAnalysisView.h"
 
 #define RechargeRecordBtn_Height 40
 
@@ -34,7 +33,7 @@
 @property (nonatomic, weak) UIView *scrollBackgroundView;
 @property (nonatomic, weak) UITableView *rechargeRecordTableView;
 @property (nonatomic, weak) UIView *monthAnalysisView;
-@property (nonatomic, weak) LQYearAnalysisView *yearAnalysisView;
+@property (nonatomic, weak) UIView *yearAnalysisView;
 @property (nonatomic, weak) LQCalendarView *calendar;
 @property (nonatomic, weak) LQChooseMonthBtnGroup *chooseMonthBtnGroupView;
 
@@ -210,11 +209,12 @@
     return _monthAnalysisView;
 }
 
-- (LQYearAnalysisView *)yearAnalysisView
+- (UIView *)yearAnalysisView
 {
     if (_yearAnalysisView == nil)
     {
-        LQYearAnalysisView *view = [[LQYearAnalysisView alloc] init];
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor blueColor];
         [self.scrollBackgroundView addSubview:view];
         
         [view mas_makeConstraints:^(MASConstraintMaker *make) {

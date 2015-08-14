@@ -1,0 +1,81 @@
+//
+//  LQChartView.m
+//  朝阳能源结算
+//
+//  Created by admin on 15/8/14.
+//  Copyright (c) 2015年 dieshang. All rights reserved.
+//
+
+#import "LQChartView.h"
+#import "UUChart.h"
+
+@interface LQChartView()<UUChartDataSource>
+
+@property (nonatomic, strong) UUChart *chartView;
+
+@end
+
+@implementation LQChartView
+
++ (instancetype)chartViewWithFrame:(CGRect)frame
+{
+    return [[self alloc] initWithFrame:frame];
+}
+
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
+        [self doLoading];
+    }
+    
+    return self;
+}
+
+- (void)doLoading
+{
+    self.chartView = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width-20, 150)withSource:self withStyle:UUChartBarStyle];
+    
+    [self.chartView showInView:self];
+}
+
+- (NSArray *)getXTitles:(int)num
+{
+    NSMutableArray *xTitles = [NSMutableArray array];
+    for (int i=0; i<num; i++)
+    {
+        NSString * str = [NSString stringWithFormat:@"%d",i+1];
+        
+        [xTitles addObject:str];
+    }
+    return xTitles;
+}
+
+#pragma mark - @required
+//横坐标标题数组
+- (NSArray *)UUChart_xLableArray:(UUChart *)chart
+{
+    return [self getXTitles:12];
+}
+
+//数值多重数组
+- (NSArray *)UUChart_yValueArray:(UUChart *)chart
+{
+    NSArray *ary4 = @[@"13.8",@"27.5",@"25",@"55",@"52",@"3",@"12",@"25",@"55",@"52",@"52",@"14"];
+    return @[ary4];
+}
+
+//判断显示横线条
+- (BOOL)UUChart:(UUChart *)chart ShowHorizonLineAtIndex:(NSInteger)index
+{
+    return YES;
+}
+//颜色数组
+- (NSArray *)UUChart_ColorArray:(UUChart *)chart
+{
+    return @[RGB(158, 170, 215)];
+}
+
+
+@end

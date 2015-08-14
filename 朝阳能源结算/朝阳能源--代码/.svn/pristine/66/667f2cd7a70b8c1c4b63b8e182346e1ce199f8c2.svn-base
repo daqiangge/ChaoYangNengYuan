@@ -132,21 +132,18 @@ static NSString *Footer = @"Footer";
 #pragma mark - CollectionView 数据源
 
 // 返回组数
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.calendarMonth.count;
 }
 // 返回每组行数
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     NSArray *arrary = [self.calendarMonth objectAtIndex:section];
     return arrary.count;
 }
 
 #pragma mark - CollectionView 代理
 
-- (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     RMCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DayCell forIndexPath:indexPath];
     NSArray *months = [self.calendarMonth objectAtIndex:indexPath.section];
     RMCalendarModel *model = [months objectAtIndex:indexPath.row];
@@ -177,8 +174,7 @@ static NSString *Footer = @"Footer";
     
 }
 
-- (void)collectionView:(nonnull UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
+- (void)collectionView:(nonnull UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSArray *months = [self.calendarMonth objectAtIndex:indexPath.section];
     RMCalendarModel *model = [months objectAtIndex:indexPath.row];
     if (model.style == CellDayTypeClick || model.style == CellDayTypeFutur || model.style == CellDayTypeWeek) {
@@ -190,9 +186,8 @@ static NSString *Footer = @"Footer";
     [self.collectionView reloadData];
 }
 
-- (BOOL)collectionView:(nonnull UICollectionView *)collectionView shouldSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    return false;
+- (BOOL)collectionView:(nonnull UICollectionView *)collectionView shouldSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    return YES;
 }
 
 @end
