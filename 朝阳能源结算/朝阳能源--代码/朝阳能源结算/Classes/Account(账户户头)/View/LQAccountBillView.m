@@ -17,14 +17,16 @@
 //-------------------------------------------------------------
 
 #import "LQAccountBillView.h"
-#import "LQRechargeRecordTableViewCell.h"
+#import "LQRechargeRecordCell.h"
 #import "LQCalendarView.h"
 #import "LQChooseMonthBtnGroup.h"
 #import "LQYearAnalysisView.h"
+#import "LQRechargeRecordHeaderView.h"
 
 #define RechargeRecordBtn_Height 40
+#define ChooseModulaiBtn_FontOfSize 15
 
-@interface LQAccountBillView()<UITableViewDataSource,UITableViewDelegate,LQChooseMonthBtnGroupDelegate>
+@interface LQAccountBillView()<UITableViewDataSource,UITableViewDelegate,LQChooseMonthBtnGroupDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, weak) UIView *lineView;
 @property (nonatomic, weak) UIButton *rechargeRecordBtn;
@@ -66,7 +68,9 @@
 {
     if (_rechargeRecordBtn == nil)
     {
-        _rechargeRecordBtn = [self buttonWithTitle:@"充值记录" action:@selector(rechargeRecordBtn:)];
+        _rechargeRecordBtn = [self buttonWithTitle:@"充值记录" action:@selector(chooseModular:)];
+        _rechargeRecordBtn.titleLabel.font = [UIFont boldSystemFontOfSize:ChooseModulaiBtn_FontOfSize];
+        _rechargeRecordBtn.tag = 300;
         
         [_rechargeRecordBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
@@ -100,7 +104,8 @@
 {
     if (_monthAnalysisBtn == nil)
     {
-        _monthAnalysisBtn = [self buttonWithTitle:@"月用能分析" action:@selector(rechargeRecordBtn:)];
+        _monthAnalysisBtn = [self buttonWithTitle:@"月用能分析" action:@selector(chooseModular:)];
+        _monthAnalysisBtn.tag = 301;
         
         [_monthAnalysisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
@@ -116,7 +121,8 @@
 {
     if (_yearAnalysisBtn == nil)
     {
-        _yearAnalysisBtn = [self buttonWithTitle:@"年用能分析" action:@selector(rechargeRecordBtn:)];
+        _yearAnalysisBtn = [self buttonWithTitle:@"年用能分析" action:@selector(chooseModular:)];
+        _yearAnalysisBtn.tag = 302;
         
         [_yearAnalysisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_top);
@@ -133,6 +139,7 @@
     if (_scrollView == nil)
     {
         UIScrollView *scrollView = [[UIScrollView alloc] init];
+        scrollView.delegate = self;
         scrollView.pagingEnabled = YES;
         [self addSubview:scrollView];
         
@@ -172,16 +179,26 @@
 {
     if (_rechargeRecordTableView == nil)
     {
+        LQRechargeRecordHeaderView *view = [[LQRechargeRecordHeaderView alloc] initWithFrame:CGRectMake(0, 0, LQScreen_Width, 40)];
+        [self.scrollBackgroundView addSubview:view];
+        
         UITableView *tableView = [[UITableView alloc] init];
         tableView.delegate = self;
         tableView.dataSource = self;
+        tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
         [self.scrollBackgroundView addSubview:tableView];
         
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.and.bottom.equalTo(self.scrollBackgroundView);
+            make.top.equalTo(view.mas_bottom);
+            make.bottom.equalTo(self.scrollBackgroundView.mas_bottom);
             make.left.equalTo(self.scrollBackgroundView.mas_left);
             make.width.mas_equalTo(self.scrollView);
-            make.height.mas_equalTo(self.scrollBackgroundView);
+        }];
+        
+        __weak __typeof(self) weakSelf = self;
+        // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+        tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [weakSelf refreshingRechargeRecord];
         }];
         
         _rechargeRecordTableView = tableView;
@@ -220,8 +237,7 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.and.bottom.equalTo(self.scrollBackgroundView);
             make.left.equalTo(self.monthAnalysisView.mas_right);
-            make.width.mas_equalTo(self.scrollView);
-            make.height.mas_equalTo(self.scrollBackgroundView);
+            make.right.equalTo(self.scrollBackgroundView.mas_right);
         }];
         
         _yearAnalysisView = view;
@@ -265,9 +281,6 @@
             }
         };
         
-        calendar.layer.borderColor = Layer_BorderColor;
-        calendar.layer.borderWidth = 1;
-        
         [self.scrollBackgroundView addSubview:calendar];
         
         [calendar mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -288,7 +301,7 @@
     UIButton *button = [[UIButton alloc] init];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    button.titleLabel.font = [UIFont systemFontOfSize:ChooseModulaiBtn_FontOfSize];
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
     
@@ -345,13 +358,38 @@
 /**
  *  功能模块的选择切换
  */
-- (void)rechargeRecordBtn:(UIButton *)btn
+- (void)chooseModular:(UIButton *)btn
 {
+    self.rechargeRecordBtn.titleLabel.font = [UIFont systemFontOfSize:ChooseModulaiBtn_FontOfSize];
+    self.monthAnalysisBtn.titleLabel.font  = [UIFont systemFontOfSize:ChooseModulaiBtn_FontOfSize];
+    self.yearAnalysisBtn.titleLabel.font   = [UIFont systemFontOfSize:ChooseModulaiBtn_FontOfSize];
+    
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:ChooseModulaiBtn_FontOfSize];
+    
     [self.lineView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(btn.mas_centerX);
         make.bottom.equalTo(btn.mas_bottom);
         make.size.mas_equalTo(CGSizeMake(LQScreen_Width/3 - 40, 3));
     }];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.scrollView.contentOffset = CGPointMake(LQScreen_Width*(btn.tag - 300), 0);
+    }];
+}
+
+/**
+ *  刷新充值记录列表
+ */
+- (void)refreshingRechargeRecord
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"刷新成功");
+        
+        [self.rechargeRecordTableView reloadData];
+        
+        // 拿到当前的下拉刷新控件，结束刷新状态
+        [self.rechargeRecordTableView.header endRefreshing];
+    });
 }
 
 #pragma mark - TableViewDelegate&Datasource
@@ -362,20 +400,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LQRechargeRecordTableViewCell *cell = [[LQRechargeRecordTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    LQRechargeRecordCell *cell = [[LQRechargeRecordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return RechargeRecordCell_Height;
+    return Cell_Height;
 }
 
 #pragma mark - LQChooseMonthBtnGroupDelegate
 - (void)chooseMonthBtnGroupDidClickBtnWithView:(LQChooseMonthBtnGroup *)view button:(UIButton *)btn
 {
     [self.calendar changeSingleShowMonth:(int)btn.tag-100];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGPoint offset = self.scrollView.contentOffset;
+    CGFloat offsetX = offset.x;
+    CGFloat width = self.scrollView.frame.size.width;
+    int pageNum = offsetX  / width;
+    
+    UIButton *btn = nil;
+    switch (pageNum) {
+        case 0:
+            btn = self.rechargeRecordBtn;
+            break;
+            
+        case 1:
+            btn = self.monthAnalysisBtn;
+            break;
+            
+        case 2:
+            btn = self.yearAnalysisBtn;
+            break;
+    }
+    
+    [self chooseModular:btn];
 }
 
 @end

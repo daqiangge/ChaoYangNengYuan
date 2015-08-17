@@ -19,7 +19,7 @@
         self.headerReferenceSize = CGSizeMake(screen, 30.0f);
         self.footerReferenceSize = CGSizeMake(screen, 40.0f);
         // 每个Cell大小 -1是用作1个像素的间距
-        self.itemSize = CGSizeMake(screen/7.0, screen/7.0);
+        self.itemSize = CGSizeMake(screen/7.0, (screen/7.0)-5);
         // 每行的最小间距
         self.minimumLineSpacing = 0.0f;
         // 每列的最小间距，设置Cell的大小已经留出1个像素大小，所以此处设置0即可

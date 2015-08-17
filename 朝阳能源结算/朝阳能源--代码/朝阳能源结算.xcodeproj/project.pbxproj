@@ -110,6 +110,30 @@
 		847637BB1B7DD6B100152CDD /* LQYearAnalysisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847637BA1B7DD6B100152CDD /* LQYearAnalysisView.m */; };
 		847637BE1B7DD8AD00152CDD /* LQChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847637BD1B7DD8AD00152CDD /* LQChartView.m */; };
 		847637C11B7DE4BC00152CDD /* LQEveryYearUesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847637C01B7DE4BC00152CDD /* LQEveryYearUesView.m */; };
+		849289EF1B816F1E0016B8E0 /* LQEveryYearUesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849289EE1B816F1E0016B8E0 /* LQEveryYearUesCell.m */; };
+		849289F51B817E330016B8E0 /* LQMonthAnalysisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849289F41B817E330016B8E0 /* LQMonthAnalysisView.m */; };
+		849289F81B81B6190016B8E0 /* LQChooseYearBtnGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 849289F71B81B6190016B8E0 /* LQChooseYearBtnGroup.m */; };
+		849289FB1B81C5DD0016B8E0 /* LQRechargeRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849289FA1B81C5DD0016B8E0 /* LQRechargeRecordCell.m */; };
+		849289FE1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849289FD1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m */; };
+		84928A301B81D8080016B8E0 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A061B81D8080016B8E0 /* MJRefreshAutoFooter.m */; };
+		84928A311B81D8080016B8E0 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A081B81D8080016B8E0 /* MJRefreshBackFooter.m */; };
+		84928A321B81D8080016B8E0 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A0A1B81D8080016B8E0 /* MJRefreshComponent.m */; };
+		84928A331B81D8080016B8E0 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A0C1B81D8080016B8E0 /* MJRefreshFooter.m */; };
+		84928A341B81D8080016B8E0 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A0E1B81D8080016B8E0 /* MJRefreshHeader.m */; };
+		84928A351B81D8080016B8E0 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A131B81D8080016B8E0 /* MJRefreshAutoGifFooter.m */; };
+		84928A361B81D8080016B8E0 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A151B81D8080016B8E0 /* MJRefreshAutoNormalFooter.m */; };
+		84928A371B81D8080016B8E0 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A171B81D8080016B8E0 /* MJRefreshAutoStateFooter.m */; };
+		84928A381B81D8080016B8E0 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A1A1B81D8080016B8E0 /* MJRefreshBackGifFooter.m */; };
+		84928A391B81D8080016B8E0 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A1C1B81D8080016B8E0 /* MJRefreshBackNormalFooter.m */; };
+		84928A3A1B81D8080016B8E0 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A1E1B81D8080016B8E0 /* MJRefreshBackStateFooter.m */; };
+		84928A3B1B81D8080016B8E0 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A211B81D8080016B8E0 /* MJRefreshGifHeader.m */; };
+		84928A3C1B81D8080016B8E0 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A231B81D8080016B8E0 /* MJRefreshNormalHeader.m */; };
+		84928A3D1B81D8080016B8E0 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A251B81D8080016B8E0 /* MJRefreshStateHeader.m */; };
+		84928A3E1B81D8080016B8E0 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84928A261B81D8080016B8E0 /* MJRefresh.bundle */; };
+		84928A3F1B81D8080016B8E0 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A291B81D8080016B8E0 /* MJRefreshConst.m */; };
+		84928A401B81D8080016B8E0 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2B1B81D8080016B8E0 /* UIScrollView+MJExtension.m */; };
+		84928A411B81D8080016B8E0 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2D1B81D8080016B8E0 /* UIScrollView+MJRefresh.m */; };
+		84928A421B81D8080016B8E0 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2F1B81D8080016B8E0 /* UIView+MJExtension.m */; };
 		84D11AAB1B797EBE00A5096F /* LQAccountDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AAA1B797EBE00A5096F /* LQAccountDetailsVC.m */; };
 		84D11AAE1B79809D00A5096F /* LQAccountDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */; };
 		84D11AB11B799AC700A5096F /* LQAccountBillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AB01B799AC700A5096F /* LQAccountBillView.m */; };
@@ -331,6 +355,54 @@
 		847637BD1B7DD8AD00152CDD /* LQChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChartView.m; sourceTree = "<group>"; };
 		847637BF1B7DE4BC00152CDD /* LQEveryYearUesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEveryYearUesView.h; sourceTree = "<group>"; };
 		847637C01B7DE4BC00152CDD /* LQEveryYearUesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQEveryYearUesView.m; sourceTree = "<group>"; };
+		849289ED1B816F1E0016B8E0 /* LQEveryYearUesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQEveryYearUesCell.h; sourceTree = "<group>"; };
+		849289EE1B816F1E0016B8E0 /* LQEveryYearUesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQEveryYearUesCell.m; sourceTree = "<group>"; };
+		849289F31B817E330016B8E0 /* LQMonthAnalysisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQMonthAnalysisView.h; sourceTree = "<group>"; };
+		849289F41B817E330016B8E0 /* LQMonthAnalysisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQMonthAnalysisView.m; sourceTree = "<group>"; };
+		849289F61B81B6190016B8E0 /* LQChooseYearBtnGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQChooseYearBtnGroup.h; sourceTree = "<group>"; };
+		849289F71B81B6190016B8E0 /* LQChooseYearBtnGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQChooseYearBtnGroup.m; sourceTree = "<group>"; };
+		849289F91B81C5DD0016B8E0 /* LQRechargeRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRechargeRecordCell.h; sourceTree = "<group>"; };
+		849289FA1B81C5DD0016B8E0 /* LQRechargeRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRechargeRecordCell.m; sourceTree = "<group>"; };
+		849289FC1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRechargeRecordHeaderView.h; sourceTree = "<group>"; };
+		849289FD1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRechargeRecordHeaderView.m; sourceTree = "<group>"; };
+		84928A051B81D8080016B8E0 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
+		84928A061B81D8080016B8E0 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		84928A071B81D8080016B8E0 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		84928A081B81D8080016B8E0 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackFooter.m; sourceTree = "<group>"; };
+		84928A091B81D8080016B8E0 /* MJRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
+		84928A0A1B81D8080016B8E0 /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
+		84928A0B1B81D8080016B8E0 /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
+		84928A0C1B81D8080016B8E0 /* MJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooter.m; sourceTree = "<group>"; };
+		84928A0D1B81D8080016B8E0 /* MJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
+		84928A0E1B81D8080016B8E0 /* MJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
+		84928A121B81D8080016B8E0 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		84928A131B81D8080016B8E0 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		84928A141B81D8080016B8E0 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		84928A151B81D8080016B8E0 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		84928A161B81D8080016B8E0 /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		84928A171B81D8080016B8E0 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
+		84928A191B81D8080016B8E0 /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		84928A1A1B81D8080016B8E0 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		84928A1B1B81D8080016B8E0 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		84928A1C1B81D8080016B8E0 /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		84928A1D1B81D8080016B8E0 /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
+		84928A1E1B81D8080016B8E0 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		84928A201B81D8080016B8E0 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshGifHeader.h; sourceTree = "<group>"; };
+		84928A211B81D8080016B8E0 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshGifHeader.m; sourceTree = "<group>"; };
+		84928A221B81D8080016B8E0 /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		84928A231B81D8080016B8E0 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		84928A241B81D8080016B8E0 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		84928A251B81D8080016B8E0 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
+		84928A261B81D8080016B8E0 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		84928A271B81D8080016B8E0 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		84928A281B81D8080016B8E0 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		84928A291B81D8080016B8E0 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		84928A2A1B81D8080016B8E0 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		84928A2B1B81D8080016B8E0 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		84928A2C1B81D8080016B8E0 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		84928A2D1B81D8080016B8E0 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		84928A2E1B81D8080016B8E0 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		84928A2F1B81D8080016B8E0 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		84D11AA91B797EBE00A5096F /* LQAccountDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountDetailsVC.h; sourceTree = "<group>"; };
 		84D11AAA1B797EBE00A5096F /* LQAccountDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountDetailsVC.m; sourceTree = "<group>"; };
 		84D11AAC1B79809D00A5096F /* LQAccountDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountDetailsView.h; sourceTree = "<group>"; };
@@ -558,20 +630,9 @@
 				84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */,
 				84D11AAF1B799AC700A5096F /* LQAccountBillView.h */,
 				84D11AB01B799AC700A5096F /* LQAccountBillView.m */,
-				84D11AB21B79E92600A5096F /* LQRechargeRecordTableViewCell.h */,
-				84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */,
-				840999471B7C2045005C0E80 /* LQCalendarView.h */,
-				840999481B7C2045005C0E80 /* LQCalendarView.m */,
-				84099A371B7C6340005C0E80 /* LQCalendarFooterView.h */,
-				84099A381B7C6340005C0E80 /* LQCalendarFooterView.m */,
-				84099A3A1B7C76CF005C0E80 /* LQChooseMonthBtnGroup.h */,
-				84099A3B1B7C76CF005C0E80 /* LQChooseMonthBtnGroup.m */,
-				847637B91B7DD6B100152CDD /* LQYearAnalysisView.h */,
-				847637BA1B7DD6B100152CDD /* LQYearAnalysisView.m */,
-				847637BC1B7DD8AD00152CDD /* LQChartView.h */,
-				847637BD1B7DD8AD00152CDD /* LQChartView.m */,
-				847637BF1B7DE4BC00152CDD /* LQEveryYearUesView.h */,
-				847637C01B7DE4BC00152CDD /* LQEveryYearUesView.m */,
+				84928A011B81D5A10016B8E0 /* 年用能分析 */,
+				84928A001B81D5800016B8E0 /* 月用能分析 */,
+				849289FF1B81D5600016B8E0 /* 充值记录 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -778,6 +839,7 @@
 		844568791B70569E005E88EE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84928A031B81D8080016B8E0 /* MJRefresh */,
 				847637A61B7DD68200152CDD /* Chart */,
 				8409994A1B7C213A005C0E80 /* AFNetworking */,
 				8409995E1B7C213A005C0E80 /* MJExtension */,
@@ -847,6 +909,144 @@
 				847637B21B7DD68200152CDD /* UULineChart.m */,
 			);
 			path = Chart;
+			sourceTree = "<group>";
+		};
+		849289FF1B81D5600016B8E0 /* 充值记录 */ = {
+			isa = PBXGroup;
+			children = (
+				84D11AB21B79E92600A5096F /* LQRechargeRecordTableViewCell.h */,
+				84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */,
+				849289FC1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.h */,
+				849289FD1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m */,
+				849289F91B81C5DD0016B8E0 /* LQRechargeRecordCell.h */,
+				849289FA1B81C5DD0016B8E0 /* LQRechargeRecordCell.m */,
+			);
+			name = "充值记录";
+			sourceTree = "<group>";
+		};
+		84928A001B81D5800016B8E0 /* 月用能分析 */ = {
+			isa = PBXGroup;
+			children = (
+				849289F31B817E330016B8E0 /* LQMonthAnalysisView.h */,
+				849289F41B817E330016B8E0 /* LQMonthAnalysisView.m */,
+				840999471B7C2045005C0E80 /* LQCalendarView.h */,
+				840999481B7C2045005C0E80 /* LQCalendarView.m */,
+				84099A371B7C6340005C0E80 /* LQCalendarFooterView.h */,
+				84099A381B7C6340005C0E80 /* LQCalendarFooterView.m */,
+				84099A3A1B7C76CF005C0E80 /* LQChooseMonthBtnGroup.h */,
+				84099A3B1B7C76CF005C0E80 /* LQChooseMonthBtnGroup.m */,
+			);
+			name = "月用能分析";
+			sourceTree = "<group>";
+		};
+		84928A011B81D5A10016B8E0 /* 年用能分析 */ = {
+			isa = PBXGroup;
+			children = (
+				847637B91B7DD6B100152CDD /* LQYearAnalysisView.h */,
+				847637BA1B7DD6B100152CDD /* LQYearAnalysisView.m */,
+				849289F61B81B6190016B8E0 /* LQChooseYearBtnGroup.h */,
+				849289F71B81B6190016B8E0 /* LQChooseYearBtnGroup.m */,
+				847637BC1B7DD8AD00152CDD /* LQChartView.h */,
+				847637BD1B7DD8AD00152CDD /* LQChartView.m */,
+				847637BF1B7DE4BC00152CDD /* LQEveryYearUesView.h */,
+				847637C01B7DE4BC00152CDD /* LQEveryYearUesView.m */,
+				849289ED1B816F1E0016B8E0 /* LQEveryYearUesCell.h */,
+				849289EE1B816F1E0016B8E0 /* LQEveryYearUesCell.m */,
+			);
+			name = "年用能分析";
+			sourceTree = "<group>";
+		};
+		84928A031B81D8080016B8E0 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				84928A041B81D8080016B8E0 /* Base */,
+				84928A0F1B81D8080016B8E0 /* Custom */,
+				84928A261B81D8080016B8E0 /* MJRefresh.bundle */,
+				84928A271B81D8080016B8E0 /* MJRefresh.h */,
+				84928A281B81D8080016B8E0 /* MJRefreshConst.h */,
+				84928A291B81D8080016B8E0 /* MJRefreshConst.m */,
+				84928A2A1B81D8080016B8E0 /* UIScrollView+MJExtension.h */,
+				84928A2B1B81D8080016B8E0 /* UIScrollView+MJExtension.m */,
+				84928A2C1B81D8080016B8E0 /* UIScrollView+MJRefresh.h */,
+				84928A2D1B81D8080016B8E0 /* UIScrollView+MJRefresh.m */,
+				84928A2E1B81D8080016B8E0 /* UIView+MJExtension.h */,
+				84928A2F1B81D8080016B8E0 /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		84928A041B81D8080016B8E0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84928A051B81D8080016B8E0 /* MJRefreshAutoFooter.h */,
+				84928A061B81D8080016B8E0 /* MJRefreshAutoFooter.m */,
+				84928A071B81D8080016B8E0 /* MJRefreshBackFooter.h */,
+				84928A081B81D8080016B8E0 /* MJRefreshBackFooter.m */,
+				84928A091B81D8080016B8E0 /* MJRefreshComponent.h */,
+				84928A0A1B81D8080016B8E0 /* MJRefreshComponent.m */,
+				84928A0B1B81D8080016B8E0 /* MJRefreshFooter.h */,
+				84928A0C1B81D8080016B8E0 /* MJRefreshFooter.m */,
+				84928A0D1B81D8080016B8E0 /* MJRefreshHeader.h */,
+				84928A0E1B81D8080016B8E0 /* MJRefreshHeader.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		84928A0F1B81D8080016B8E0 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				84928A101B81D8080016B8E0 /* Footer */,
+				84928A1F1B81D8080016B8E0 /* Header */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		84928A101B81D8080016B8E0 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				84928A111B81D8080016B8E0 /* Auto */,
+				84928A181B81D8080016B8E0 /* Back */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		84928A111B81D8080016B8E0 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				84928A121B81D8080016B8E0 /* MJRefreshAutoGifFooter.h */,
+				84928A131B81D8080016B8E0 /* MJRefreshAutoGifFooter.m */,
+				84928A141B81D8080016B8E0 /* MJRefreshAutoNormalFooter.h */,
+				84928A151B81D8080016B8E0 /* MJRefreshAutoNormalFooter.m */,
+				84928A161B81D8080016B8E0 /* MJRefreshAutoStateFooter.h */,
+				84928A171B81D8080016B8E0 /* MJRefreshAutoStateFooter.m */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		84928A181B81D8080016B8E0 /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				84928A191B81D8080016B8E0 /* MJRefreshBackGifFooter.h */,
+				84928A1A1B81D8080016B8E0 /* MJRefreshBackGifFooter.m */,
+				84928A1B1B81D8080016B8E0 /* MJRefreshBackNormalFooter.h */,
+				84928A1C1B81D8080016B8E0 /* MJRefreshBackNormalFooter.m */,
+				84928A1D1B81D8080016B8E0 /* MJRefreshBackStateFooter.h */,
+				84928A1E1B81D8080016B8E0 /* MJRefreshBackStateFooter.m */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		84928A1F1B81D8080016B8E0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				84928A201B81D8080016B8E0 /* MJRefreshGifHeader.h */,
+				84928A211B81D8080016B8E0 /* MJRefreshGifHeader.m */,
+				84928A221B81D8080016B8E0 /* MJRefreshNormalHeader.h */,
+				84928A231B81D8080016B8E0 /* MJRefreshNormalHeader.m */,
+				84928A241B81D8080016B8E0 /* MJRefreshStateHeader.h */,
+				84928A251B81D8080016B8E0 /* MJRefreshStateHeader.m */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -944,6 +1144,7 @@
 				8431EFA81B7B2FC7000BAA56 /* CalendarRowBottom.png in Resources */,
 				8431EFA21B7B2FC7000BAA56 /* CalendarDisableDate.png in Resources */,
 				8431EFA91B7B2FC7000BAA56 /* CalendarRowBottom@2x.png in Resources */,
+				84928A3E1B81D8080016B8E0 /* MJRefresh.bundle in Resources */,
 				8445684F1B7053CF005E88EE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,6 +1164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8467C71C1B758706003BD575 /* LQAccountInformationView.m in Sources */,
+				84928A351B81D8080016B8E0 /* MJRefreshAutoGifFooter.m in Sources */,
 				840999A51B7C213A005C0E80 /* MJProperty.m in Sources */,
 				844568A61B70569E005E88EE /* AppDelegate.m in Sources */,
 				8409999A1B7C213A005C0E80 /* AFHTTPRequestOperation.m in Sources */,
@@ -973,7 +1175,9 @@
 				847637B41B7DD68200152CDD /* UUBarChart.m in Sources */,
 				8409999E1B7C213A005C0E80 /* AFSecurityPolicy.m in Sources */,
 				844568A21B70569E005E88EE /* MASViewConstraint.m in Sources */,
+				84928A3C1B81D8080016B8E0 /* MJRefreshNormalHeader.m in Sources */,
 				840999A91B7C213A005C0E80 /* NSObject+MJProperty.m in Sources */,
+				849289FB1B81C5DD0016B8E0 /* LQRechargeRecordCell.m in Sources */,
 				840999B91B7C213A005C0E80 /* UIImageView+WebCache.m in Sources */,
 				844568A11B70569E005E88EE /* MASViewAttribute.m in Sources */,
 				844568981B70569E005E88EE /* UIButton+LQExtension.m in Sources */,
@@ -984,9 +1188,15 @@
 				840999A31B7C213A005C0E80 /* MJExtensionConst.m in Sources */,
 				8408BCC81B75908500C73932 /* RSKImageCropViewController.m in Sources */,
 				841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */,
+				84928A3B1B81D8080016B8E0 /* MJRefreshGifHeader.m in Sources */,
 				84D11AB41B79E92600A5096F /* LQRechargeRecordTableViewCell.m in Sources */,
+				849289FE1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m in Sources */,
 				840999A41B7C213A005C0E80 /* MJFoundation.m in Sources */,
 				844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */,
+				84928A3A1B81D8080016B8E0 /* MJRefreshBackStateFooter.m in Sources */,
+				84928A381B81D8080016B8E0 /* MJRefreshBackGifFooter.m in Sources */,
+				84928A391B81D8080016B8E0 /* MJRefreshBackNormalFooter.m in Sources */,
+				849289F51B817E330016B8E0 /* LQMonthAnalysisView.m in Sources */,
 				840999B61B7C213A005C0E80 /* UIImage+MultiFormat.m in Sources */,
 				84099A391B7C6340005C0E80 /* LQCalendarFooterView.m in Sources */,
 				8445689D1B70569E005E88EE /* MASCompositeConstraint.m in Sources */,
@@ -997,6 +1207,7 @@
 				844568A51B70569E005E88EE /* View+MASAdditions.m in Sources */,
 				840999AC1B7C213A005C0E80 /* NSData+ImageContentType.m in Sources */,
 				8408BCCB1B75908500C73932 /* UIApplication+RSKImageCropper.m in Sources */,
+				84928A401B81D8080016B8E0 /* UIScrollView+MJExtension.m in Sources */,
 				840999A11B7C213A005C0E80 /* AFURLResponseSerialization.m in Sources */,
 				8408BCCF1B7597DA00C73932 /* LQNavigationController.m in Sources */,
 				844568A71B70569E005E88EE /* main.m in Sources */,
@@ -1008,13 +1219,20 @@
 				844568991B70569E005E88EE /* UIColor+LQExtension.m in Sources */,
 				8431EFB01B7B2FC7000BAA56 /* RMCollectionCell.m in Sources */,
 				840999BA1B7C213A005C0E80 /* UIView+WebCacheOperation.m in Sources */,
+				84928A3D1B81D8080016B8E0 /* MJRefreshStateHeader.m in Sources */,
+				84928A341B81D8080016B8E0 /* MJRefreshHeader.m in Sources */,
+				84928A331B81D8080016B8E0 /* MJRefreshFooter.m in Sources */,
 				8431EFA01B7B2FC7000BAA56 /* RMCalendarModel.m in Sources */,
+				84928A321B81D8080016B8E0 /* MJRefreshComponent.m in Sources */,
 				8431EF9D1B7B2FC7000BAA56 /* UIView+CustomFrame.m in Sources */,
 				841927191B74A29400CD6FD1 /* LQLoginVC.m in Sources */,
 				8408BCC91B75908500C73932 /* RSKImageScrollView.m in Sources */,
+				849289F81B81B6190016B8E0 /* LQChooseYearBtnGroup.m in Sources */,
 				847637BE1B7DD8AD00152CDD /* LQChartView.m in Sources */,
 				840999A61B7C213A005C0E80 /* MJType.m in Sources */,
+				84928A371B81D8080016B8E0 /* MJRefreshAutoStateFooter.m in Sources */,
 				844568A31B70569E005E88EE /* NSArray+MASAdditions.m in Sources */,
+				84928A301B81D8080016B8E0 /* MJRefreshAutoFooter.m in Sources */,
 				8409999D1B7C213A005C0E80 /* AFNetworkReachabilityManager.m in Sources */,
 				841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */,
 				844568A41B70569E005E88EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1023,10 +1241,12 @@
 				847637B61B7DD68200152CDD /* UUChartLabel.m in Sources */,
 				847637C11B7DE4BC00152CDD /* LQEveryYearUesView.m in Sources */,
 				840999B31B7C213A005C0E80 /* SDWebImagePrefetcher.m in Sources */,
+				84928A411B81D8080016B8E0 /* UIScrollView+MJRefresh.m in Sources */,
 				840999A71B7C213A005C0E80 /* NSObject+MJCoding.m in Sources */,
 				840999B71B7C213A005C0E80 /* UIImage+WebP.m in Sources */,
 				8431EF9F1B7B2FC7000BAA56 /* RMCalendarLogic.m in Sources */,
 				847637B31B7DD68200152CDD /* UUBar.m in Sources */,
+				84928A311B81D8080016B8E0 /* MJRefreshBackFooter.m in Sources */,
 				840999AD1B7C213A005C0E80 /* SDImageCache.m in Sources */,
 				847637B51B7DD68200152CDD /* UUChart.m in Sources */,
 				8445689B1B70569E005E88EE /* UIView+Extension.m in Sources */,
@@ -1034,6 +1254,7 @@
 				8408BCCC1B75908500C73932 /* UIImage+RSKImageCropper.m in Sources */,
 				840999B81B7C213A005C0E80 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8409999C1B7C213A005C0E80 /* AFHTTPSessionManager.m in Sources */,
+				84928A421B81D8080016B8E0 /* UIView+MJExtension.m in Sources */,
 				8431EF9C1B7B2FC7000BAA56 /* NSDate+RMCalendarLogic.m in Sources */,
 				840999BB1B7C213A005C0E80 /* CJSONDeserializer.m in Sources */,
 				840999AE1B7C213A005C0E80 /* SDWebImageCompat.m in Sources */,
@@ -1049,8 +1270,11 @@
 				840999AF1B7C213A005C0E80 /* SDWebImageDecoder.m in Sources */,
 				840999B11B7C213A005C0E80 /* SDWebImageDownloaderOperation.m in Sources */,
 				84D11AB11B799AC700A5096F /* LQAccountBillView.m in Sources */,
+				84928A3F1B81D8080016B8E0 /* MJRefreshConst.m in Sources */,
+				84928A361B81D8080016B8E0 /* MJRefreshAutoNormalFooter.m in Sources */,
 				847637B81B7DD68200152CDD /* UULineChart.m in Sources */,
 				840999491B7C2045005C0E80 /* LQCalendarView.m in Sources */,
+				849289EF1B816F1E0016B8E0 /* LQEveryYearUesCell.m in Sources */,
 				84D11AAB1B797EBE00A5096F /* LQAccountDetailsVC.m in Sources */,
 				8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */,
 			);

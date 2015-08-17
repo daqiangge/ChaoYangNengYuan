@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define ChartView_Height 180
+#define BtnGroupView_Height 40
+
 @interface LQYearAnalysisView : UIView
 
 + (instancetype)yearAnalysisViewWithFrame:(CGRect)frame;

@@ -34,6 +34,9 @@
     if (self) {
         // Initialization code
         [self initWithHeader];
+        
+        self.layer.borderColor = Layer_BorderColor;
+        self.layer.borderWidth = 0.5;
     }
     return self;
 }

@@ -32,6 +32,8 @@
     if (self = [super initWithFrame:frame])
     {
         [self doLoading];
+        self.layer.borderColor = Layer_BorderColor;
+        self.layer.borderWidth = 0.5;
     }
     
     return self;
@@ -62,7 +64,6 @@
     
     [self.totalAttributedStr insertAttributedString:[[NSMutableAttributedString alloc] initWithString:@"2333.99" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}] atIndex:3];
     totalLable.attributedText = self.totalAttributedStr;
-    
 }
 
 

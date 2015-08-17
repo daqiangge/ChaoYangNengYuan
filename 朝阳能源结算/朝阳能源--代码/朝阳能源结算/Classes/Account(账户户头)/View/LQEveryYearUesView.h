@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define EveryYearUseView_Height 115
+
 @interface LQEveryYearUesView : UIView
 
 + (instancetype)everyYearUesViewWithFrame:(CGRect)frame;
