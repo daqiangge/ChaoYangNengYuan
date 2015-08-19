@@ -1,0 +1,56 @@
+//
+//  LQPayWayCell.m
+//  朝阳能源结算
+//
+//  Created by admin on 15/8/19.
+//  Copyright (c) 2015年 dieshang. All rights reserved.
+//
+
+#import "LQPayWayCell.h"
+
+@interface LQPayWayCell()
+@property (weak, nonatomic) IBOutlet UIImageView *payImageView;
+@property (weak, nonatomic) IBOutlet UILabel *payLable;
+@property (weak, nonatomic) IBOutlet UILabel *promptLable;
+@end
+
+@implementation LQPayWayCell
+
++ (LQPayWayCell *)cellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
+{
+    UINib *nib = [UINib nibWithNibName:@"LQPayWayCell" bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:@"LQPayWayCell"];
+    
+    LQPayWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LQPayWayCell"];
+    
+    cell.payImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"支付-%ld",indexPath.row]];
+    
+    switch (indexPath.row)
+    {
+        case 0:
+        {
+            cell.choosePayBtn.selected = YES;
+            cell.payLable.text = @"微信支付";
+            cell.promptLable.text = @"推荐安装微信5.0及以上版本的使用";
+        }
+            break;
+            
+        case 1:
+        {
+            cell.payLable.text = @"银行卡支付";
+            cell.promptLable.text = @"支持储蓄卡信用卡，无需开通网银";
+        }
+            break;
+            
+        case 2:
+        {
+            cell.payLable.text = @"支付宝支付";
+            cell.promptLable.text = @"推荐有支付宝账号的用户使用";
+        }
+            break;
+    }
+    
+    return cell;
+}
+
+@end
