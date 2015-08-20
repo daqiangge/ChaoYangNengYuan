@@ -57,6 +57,10 @@
 		840D29E61B72062000DA2155 /* LQChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D29E41B72062000DA2155 /* LQChangePasswordVC.xib */; };
 		841927121B74A25500CD6FD1 /* LQAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8419270E1B74A25500CD6FD1 /* LQAccountVC.m */; };
 		841927131B74A25500CD6FD1 /* LQAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */; };
+		8419E8521B85CC9F00D18798 /* LQOrderInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8419E84D1B85CC9F00D18798 /* LQOrderInformationCell.m */; };
+		8419E8531B85CC9F00D18798 /* LQOrderInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8419E84E1B85CC9F00D18798 /* LQOrderInformationCell.xib */; };
+		8419E8541B85CC9F00D18798 /* LQPayWayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8419E8501B85CC9F00D18798 /* LQPayWayCell.m */; };
+		8419E8551B85CC9F00D18798 /* LQPayWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8419E8511B85CC9F00D18798 /* LQPayWayCell.xib */; };
 		8431EF761B7ADB1D000BAA56 /* UILabel+LQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431EF751B7ADB1D000BAA56 /* UILabel+LQExtension.m */; };
 		8431EF9C1B7B2FC7000BAA56 /* NSDate+RMCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431EF7A1B7B2FC7000BAA56 /* NSDate+RMCalendarLogic.m */; };
 		8431EF9D1B7B2FC7000BAA56 /* UIView+CustomFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431EF7C1B7B2FC7000BAA56 /* UIView+CustomFrame.m */; };
@@ -151,10 +155,6 @@
 		84D11AAE1B79809D00A5096F /* LQAccountDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */; };
 		84D11AB11B799AC700A5096F /* LQAccountBillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AB01B799AC700A5096F /* LQAccountBillView.m */; };
 		84D11AB41B79E92600A5096F /* LQRechargeRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */; };
-		84E1B4261B84624D00586D60 /* LQOrderInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E1B4241B84624D00586D60 /* LQOrderInformationCell.m */; };
-		84E1B4271B84624D00586D60 /* LQOrderInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E1B4251B84624D00586D60 /* LQOrderInformationCell.xib */; };
-		84E1B42B1B8464F300586D60 /* LQPayWayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E1B4291B8464F300586D60 /* LQPayWayCell.m */; };
-		84E1B42C1B8464F300586D60 /* LQPayWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E1B42A1B8464F300586D60 /* LQPayWayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +273,12 @@
 		8419270E1B74A25500CD6FD1 /* LQAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountVC.m; sourceTree = "<group>"; };
 		841927101B74A25500CD6FD1 /* LQAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQAccountTableViewCell.h; sourceTree = "<group>"; };
 		841927111B74A25500CD6FD1 /* LQAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountTableViewCell.m; sourceTree = "<group>"; };
+		8419E84C1B85CC9F00D18798 /* LQOrderInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQOrderInformationCell.h; sourceTree = "<group>"; };
+		8419E84D1B85CC9F00D18798 /* LQOrderInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQOrderInformationCell.m; sourceTree = "<group>"; };
+		8419E84E1B85CC9F00D18798 /* LQOrderInformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQOrderInformationCell.xib; sourceTree = "<group>"; };
+		8419E84F1B85CC9F00D18798 /* LQPayWayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQPayWayCell.h; sourceTree = "<group>"; };
+		8419E8501B85CC9F00D18798 /* LQPayWayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQPayWayCell.m; sourceTree = "<group>"; };
+		8419E8511B85CC9F00D18798 /* LQPayWayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQPayWayCell.xib; sourceTree = "<group>"; };
 		8431EF741B7ADB1D000BAA56 /* UILabel+LQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LQExtension.h"; sourceTree = "<group>"; };
 		8431EF751B7ADB1D000BAA56 /* UILabel+LQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LQExtension.m"; sourceTree = "<group>"; };
 		8431EF791B7B2FC7000BAA56 /* NSDate+RMCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RMCalendarLogic.h"; sourceTree = "<group>"; };
@@ -454,12 +460,6 @@
 		84D11AB01B799AC700A5096F /* LQAccountBillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQAccountBillView.m; sourceTree = "<group>"; };
 		84D11AB21B79E92600A5096F /* LQRechargeRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQRechargeRecordTableViewCell.h; sourceTree = "<group>"; };
 		84D11AB31B79E92600A5096F /* LQRechargeRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQRechargeRecordTableViewCell.m; sourceTree = "<group>"; };
-		84E1B4231B84624D00586D60 /* LQOrderInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQOrderInformationCell.h; sourceTree = "<group>"; };
-		84E1B4241B84624D00586D60 /* LQOrderInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQOrderInformationCell.m; sourceTree = "<group>"; };
-		84E1B4251B84624D00586D60 /* LQOrderInformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQOrderInformationCell.xib; sourceTree = "<group>"; };
-		84E1B4281B8464F300586D60 /* LQPayWayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQPayWayCell.h; sourceTree = "<group>"; };
-		84E1B4291B8464F300586D60 /* LQPayWayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQPayWayCell.m; sourceTree = "<group>"; };
-		84E1B42A1B8464F300586D60 /* LQPayWayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQPayWayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,12 +669,6 @@
 				84AE72C31B8308A2008A39BF /* LQRechargeVC.m */,
 				84C2B6721B8414E00099BB90 /* LQOrderVC.h */,
 				84C2B6731B8414E00099BB90 /* LQOrderVC.m */,
-				84E1B4231B84624D00586D60 /* LQOrderInformationCell.h */,
-				84E1B4241B84624D00586D60 /* LQOrderInformationCell.m */,
-				84E1B4251B84624D00586D60 /* LQOrderInformationCell.xib */,
-				84E1B4281B8464F300586D60 /* LQPayWayCell.h */,
-				84E1B4291B8464F300586D60 /* LQPayWayCell.m */,
-				84E1B42A1B8464F300586D60 /* LQPayWayCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -690,6 +684,7 @@
 				84D11AAD1B79809D00A5096F /* LQAccountDetailsView.m */,
 				84D11AAF1B799AC700A5096F /* LQAccountBillView.h */,
 				84D11AB01B799AC700A5096F /* LQAccountBillView.m */,
+				8419E84B1B85CB7700D18798 /* 充值支付 */,
 				84928A011B81D5A10016B8E0 /* 年用能分析 */,
 				84928A001B81D5800016B8E0 /* 月用能分析 */,
 				849289FF1B81D5600016B8E0 /* 充值记录 */,
@@ -712,6 +707,19 @@
 				84AE72991B82BA1A008A39BF /* LQLoginVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8419E84B1B85CB7700D18798 /* 充值支付 */ = {
+			isa = PBXGroup;
+			children = (
+				8419E84C1B85CC9F00D18798 /* LQOrderInformationCell.h */,
+				8419E84D1B85CC9F00D18798 /* LQOrderInformationCell.m */,
+				8419E84E1B85CC9F00D18798 /* LQOrderInformationCell.xib */,
+				8419E84F1B85CC9F00D18798 /* LQPayWayCell.h */,
+				8419E8501B85CC9F00D18798 /* LQPayWayCell.m */,
+				8419E8511B85CC9F00D18798 /* LQPayWayCell.xib */,
+			);
+			name = "充值支付";
 			sourceTree = "<group>";
 		};
 		8431EF771B7B2FC7000BAA56 /* Calendar */ = {
@@ -1243,15 +1251,15 @@
 				8431EFA71B7B2FC7000BAA56 /* CalendarRow@2x.png in Resources */,
 				8431EFA31B7B2FC7000BAA56 /* CalendarNormalDate.png in Resources */,
 				8431EFA51B7B2FC7000BAA56 /* CalendarPreviousMonth@2x.png in Resources */,
-				84E1B4271B84624D00586D60 /* LQOrderInformationCell.xib in Resources */,
 				8431EFA61B7B2FC7000BAA56 /* CalendarRow.png in Resources */,
+				8419E8531B85CC9F00D18798 /* LQOrderInformationCell.xib in Resources */,
 				8431EFAB1B7B2FC7000BAA56 /* CalendarSelectedDate@2x.png in Resources */,
 				8431EFA41B7B2FC7000BAA56 /* CalendarPreviousMonth.png in Resources */,
 				8431EFAC1B7B2FC7000BAA56 /* CalendarTodaysDate.png in Resources */,
 				8431EFA81B7B2FC7000BAA56 /* CalendarRowBottom.png in Resources */,
 				8431EFA21B7B2FC7000BAA56 /* CalendarDisableDate.png in Resources */,
-				84E1B42C1B8464F300586D60 /* LQPayWayCell.xib in Resources */,
 				8431EFA91B7B2FC7000BAA56 /* CalendarRowBottom@2x.png in Resources */,
+				8419E8551B85CC9F00D18798 /* LQPayWayCell.xib in Resources */,
 				84928A3E1B81D8080016B8E0 /* MJRefresh.bundle in Resources */,
 				8445684F1B7053CF005E88EE /* Images.xcassets in Resources */,
 			);
@@ -1302,9 +1310,9 @@
 				849289FE1B81CFE90016B8E0 /* LQRechargeRecordHeaderView.m in Sources */,
 				840999A41B7C213A005C0E80 /* MJFoundation.m in Sources */,
 				844568471B7053CE005E88EE /* ______.xcdatamodeld in Sources */,
+				8419E8541B85CC9F00D18798 /* LQPayWayCell.m in Sources */,
 				84928A3A1B81D8080016B8E0 /* MJRefreshBackStateFooter.m in Sources */,
 				84928A381B81D8080016B8E0 /* MJRefreshBackGifFooter.m in Sources */,
-				84E1B42B1B8464F300586D60 /* LQPayWayCell.m in Sources */,
 				84928A391B81D8080016B8E0 /* MJRefreshBackNormalFooter.m in Sources */,
 				849289F51B817E330016B8E0 /* LQMonthAnalysisView.m in Sources */,
 				840999B61B7C213A005C0E80 /* UIImage+MultiFormat.m in Sources */,
@@ -1356,6 +1364,7 @@
 				844568971B70569E005E88EE /* UIBarButtonItem+LQExtension.m in Sources */,
 				84AE72BB1B82D3FD008A39BF /* YTKKeyValueStore.m in Sources */,
 				847637B61B7DD68200152CDD /* UUChartLabel.m in Sources */,
+				8419E8521B85CC9F00D18798 /* LQOrderInformationCell.m in Sources */,
 				847637C11B7DE4BC00152CDD /* LQEveryYearUesView.m in Sources */,
 				840999B31B7C213A005C0E80 /* SDWebImagePrefetcher.m in Sources */,
 				84928A411B81D8080016B8E0 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1397,7 +1406,6 @@
 				849289EF1B816F1E0016B8E0 /* LQEveryYearUesCell.m in Sources */,
 				84AE72B91B82D3FD008A39BF /* FMDatabaseQueue.m in Sources */,
 				84D11AAB1B797EBE00A5096F /* LQAccountDetailsVC.m in Sources */,
-				84E1B4261B84624D00586D60 /* LQOrderInformationCell.m in Sources */,
 				8445689A1B70569E005E88EE /* UIImage+LQExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
