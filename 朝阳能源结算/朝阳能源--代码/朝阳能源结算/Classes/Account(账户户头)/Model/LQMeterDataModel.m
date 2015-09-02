@@ -1,26 +1,22 @@
 //
-//  LQAccountListModel.m
+//  LQMeterDataModel.m
 //  朝阳能源结算
 //
-//  Created by admin on 15/9/1.
+//  Created by admin on 15/9/2.
 //  Copyright (c) 2015年 dieshang. All rights reserved.
 //
 
-#import "LQAccountListModel.h"
+#import "LQMeterDataModel.h"
 
-@implementation LQAccountListModel
+@implementation LQMeterDataModel
 
 + (NSDictionary *)replacedKeyFromPropertyName
 {
     return @{@"returns":@"state.return",
              @"info":@"state.info",
              @"code":@"state.code",
-             @"items":@"data.items"};
-}
-
-+ (NSDictionary *)objectClassInArray
-{
-    return @{@"items":@"LQAccountItemModel"};
+             @"surplusamount":@"data.meterdata.surplusamount",
+             @"currentamount":@"data.meterdata.currentamount"};
 }
 
 @end
