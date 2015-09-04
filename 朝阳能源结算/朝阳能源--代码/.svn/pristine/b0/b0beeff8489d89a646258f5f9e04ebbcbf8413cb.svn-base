@@ -1,0 +1,193 @@
+//
+//  LQRechargeRecordView.m
+//  朝阳能源结算
+//
+//  Created by admin on 15/9/4.
+//  Copyright (c) 2015年 dieshang. All rights reserved.
+//
+
+#import "LQRechargeRecordView.h"
+#import "LQRechargeRecordHeaderView.h"
+#import "LQPaidChargeModel.h"
+#import "LQPaidChargeItemsModel.h"
+#import "LQRechargeRecordCell.h"
+
+@interface LQRechargeRecordView()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, weak) LQRechargeRecordHeaderView *rechargeRecordHeaderView;
+@property (nonatomic, weak) UITableView *rechargeRecordTableView;
+@property (nonatomic, copy) NSString *accountid;
+@property (nonatomic, copy) NSString *sessionid;
+@property (nonatomic, assign) int                     rechmodle;
+@property (nonatomic, strong) NSArray                 *paidChargeArray;
+@property (nonatomic, weak  ) UIActivityIndicatorView *rechargeRecordAct;
+
+@end
+
+@implementation LQRechargeRecordView
+
+- (NSArray *)paidChargeArray
+{
+    if (!_paidChargeArray)
+    {
+        _paidChargeArray = [NSArray array];
+    }
+    
+    return _paidChargeArray;
+}
+
+- (LQRechargeRecordHeaderView *)rechargeRecordHeaderView
+{
+    if (!_rechargeRecordHeaderView)
+    {
+        LQRechargeRecordHeaderView *view = [[LQRechargeRecordHeaderView alloc] init];
+        [self addSubview:view];
+        
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.and.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(LQScreen_Width, 40));
+        }];
+        
+        _rechargeRecordHeaderView = view;
+    }
+    
+    return _rechargeRecordHeaderView;
+}
+
+- (UIActivityIndicatorView *)rechargeRecordAct
+{
+    if (!_rechargeRecordAct)
+    {
+        UIActivityIndicatorView *act = [[UIActivityIndicatorView alloc] init];
+        [act setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+        [self.rechargeRecordTableView addSubview:act];
+        
+        [act mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.rechargeRecordTableView);
+            make.size.mas_equalTo(CGSizeMake(30, 30));
+        }];
+        
+        _rechargeRecordAct = act;
+    }
+    
+    return _rechargeRecordAct;
+}
+
+- (UITableView *)rechargeRecordTableView
+{
+    if (_rechargeRecordTableView == nil)
+    {
+        UITableView *tableView = [[UITableView alloc] init];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        [self addSubview:tableView];
+        
+        [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.rechargeRecordHeaderView.mas_bottom);
+            make.bottom.equalTo(self.mas_bottom);
+            make.left.equalTo(self.mas_left);
+            make.width.mas_equalTo(self);
+        }];
+        
+        tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshingTableView)];
+        
+        _rechargeRecordTableView = tableView;
+    }
+    
+    return _rechargeRecordTableView;
+}
+
++ (instancetype)rechargeRecordViewWithFrame:(CGRect)frame accountid:(NSString *)accountid sessionid:(NSString *)sessionid rechmodle:(int)rechmodle
+{
+    return [[self alloc] initWithFrame:frame accountid:accountid sessionid:sessionid rechmodle:rechmodle];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame accountid:(NSString *)accountid sessionid:(NSString *)sessionid rechmodle:(int)rechmodle
+{
+    if (self = [super initWithFrame:frame])
+    {
+        self.accountid = accountid;
+        self.sessionid = sessionid;
+        self.rechmodle = rechmodle;
+        
+        [self.rechargeRecordAct startAnimating];
+        
+        [self refreshingTableView];
+    }
+    
+    return self;
+}
+
+/**
+ *  刷新充值记录列表
+ */
+- (void)refreshingTableView
+{
+    if (self.rechmodle == 1)
+    {
+        //  获取预付费充值记录
+        [self requestPaidChargeWithURLStr:@"/energy/do/chargeapp/getprepaidcharge.do"];
+    }
+    else
+    {
+        // 获取后付费充值记录
+        [self requestPaidChargeWithURLStr:@"/energy/do/chargeapp/getpostpaidcharge.do"];
+    }
+}
+
+#pragma mark - 网络请求
+- (void)requestPaidChargeWithURLStr:(NSString *)str
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@?AccountId=%@;sessionid=%@",IP,str,self.accountid,self.sessionid];
+    
+    [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         LQLog(@"%@",operation.responseString);
+         
+         LQPaidChargeModel *paidChargeModel = [LQPaidChargeModel objectWithKeyValues:operation.responseString];
+         self.paidChargeArray = paidChargeModel.items;
+         
+         [self.rechargeRecordAct stopAnimating];
+         
+         [self.rechargeRecordTableView reloadData];
+         
+         [self.rechargeRecordTableView.header endRefreshing];
+         
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         LQLog(@"%@",error);
+         
+         [self.rechargeRecordAct stopAnimating];
+         
+         [self.rechargeRecordTableView.header endRefreshing];
+         
+         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+         hud.labelText = HTTPRequestErrer_Text;
+         hud.mode = MBProgressHUDModeText;
+         [hud hide:YES afterDelay:1.5];
+     }];
+}
+
+#pragma mark - TableViewDelegate&Datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.paidChargeArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LQRechargeRecordCell *cell = [[LQRechargeRecordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    
+    cell.paidChargeItemModel = self.paidChargeArray[indexPath.row];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return Cell_Height;
+}
+
+@end
