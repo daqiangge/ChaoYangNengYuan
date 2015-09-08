@@ -1,15 +1,15 @@
 //
-//  LQEveryYearUesCell.h
+//  LQNoRecordCell.h
 //  朝阳能源结算
 //
-//  Created by admin on 15/8/17.
+//  Created by admin on 15/9/8.
 //  Copyright (c) 2015年 dieshang. All rights reserved.
 //
 //-------------------------------------------------------------
 //-------------------------------------------------------------
 //-------------------------------------------------------------
 //-------------------------------------------------------------
-//-----------------------每月使用情况的表格cell----------------
+//-----------------------无记录cell----------------------------
 //-------------------------------------------------------------
 //-------------------------------------------------------------
 //-------------------------------------------------------------
@@ -18,9 +18,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LQEveryYearUesCell : UICollectionViewCell
+@interface LQNoRecordCell : UITableViewCell
 
-@property (nonatomic, weak) UILabel *idLable;
-@property (nonatomic, weak) UILabel *numLable;
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 
 @end
