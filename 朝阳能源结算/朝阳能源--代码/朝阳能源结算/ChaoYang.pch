@@ -21,6 +21,7 @@
     #import "YTKKeyValueStore.h"
     #import "LQNoCopyTextField.h"
     #import "UIKeyboardViewController.h"
+    #import "Regex.h"
 
     #import "UIView+Extension.h"
     #import "UIBarButtonItem+LQExtension.h"
@@ -76,5 +77,8 @@
 #define HTTPRequestLoding_Text @"正在加载。。。"
 
 #define IP @"http://192.168.0.249:8080"
+
+#define TextField_backgroundCollor [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1]
+#define TextField_height 35
 
 #endif
