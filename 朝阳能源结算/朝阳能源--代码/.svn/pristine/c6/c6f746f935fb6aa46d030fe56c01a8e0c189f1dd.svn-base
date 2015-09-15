@@ -1,0 +1,84 @@
+//
+//  ChaoYang.pch
+//  朝阳能源结算
+//
+//  Created by admin on 15/8/4.
+//  Copyright (c) 2015年 dieshang. All rights reserved.
+//
+
+#ifndef _______ChaoYang_pch
+#define _______ChaoYang_pch
+
+    #import "Masonry.h"
+    #import "LQNavigationController.h"
+    #import "AFNetworking.h"
+    #import "MJExtension.h"
+    #import "CJSONDeserializer.h"
+    #import "CJSONSerializer.h"
+    #import "UIImageView+WebCache.h"
+    #import "MJExtension.h"
+    #import "MBProgressHUD.h"
+    #import "YTKKeyValueStore.h"
+    #import "LQNoCopyTextField.h"
+    #import "UIKeyboardViewController.h"
+    #import "Regex.h"
+
+    #import "UIView+Extension.h"
+    #import "UIBarButtonItem+LQExtension.h"
+    #import "UIButton+LQExtension.h"
+    #import "NSString+LQExtension.h"
+    #import "UIImage+LQExtension.h"
+    #import "UIColor+LQExtension.h"
+    #import "UILabel+LQExtension.h"
+    #import "NSDate+RMCalendarLogic.h"
+
+/**
+ *  屏幕宽
+ */
+#define LQScreen_Width ([UIScreen mainScreen].bounds.size.width)
+
+/**
+ *  屏幕高
+ */
+#define LQScreen_Height ([UIScreen mainScreen].bounds.size.height)
+
+/**
+ *  导航栏高度
+ */
+#define NavigationBar_Height 64
+
+/**
+ *  NSLog Debug
+ */
+#ifndef __OPTIMIZE__
+#define LQLog(...) NSLog(__VA_ARGS__)
+#else
+#define LQLog(...) {}
+#endif
+
+//画边框---倒圆角
+#define Layer_CornerRadius 4
+
+//画边框---边框线的颜色
+#define Layer_BorderColor ([UIColor lightGrayColor].CGColor)
+
+//画边框---边框线的宽度
+#define Layer_BorderWidth 0.5
+
+#define RGB(A, B, C) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
+
+#define runStateArray (@[@"正常运行",@"低量报警",@"欠费运行",@"欠费关断",@"通讯异常"])
+
+#define SQL_Name @"test.db"
+#define SQL_Account_TableName @"account"
+#define SQL_Account_Key @"account"
+
+#define HTTPRequestErrer_Text @"网络出现问题，请稍后重试"
+#define HTTPRequestLoding_Text @"正在加载。。。"
+
+#define IP @"http://192.168.0.249:8080"
+
+#define TextField_backgroundCollor [UIColor colorWithRed:248/255.0 green:248/255.0 blue:248/255.0 alpha:1]
+#define TextField_height 35
+
+#endif

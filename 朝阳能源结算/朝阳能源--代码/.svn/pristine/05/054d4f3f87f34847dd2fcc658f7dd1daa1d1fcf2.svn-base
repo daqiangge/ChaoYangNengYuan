@@ -1,5 +1,5 @@
 //
-//  LQAboutAppVC.h
+//  LQForgetPasswordVC.h
 //  朝阳能源结算
 //
 //  Created by admin on 15/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LQAboutAppVC : UIViewController
+@interface LQForgetPasswordVC : UIViewController
 
 @end
