@@ -1,8 +1,8 @@
 //
-//  LQRechargeVC.h
+//  LQPayVC.h
 //  朝阳能源结算
 //
-//  Created by admin on 15/8/18.
+//  Created by admin on 15/9/16.
 //  Copyright (c) 2015年 dieshang. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class LQAccountItemModel;
 
-@interface LQRechargeVC : UIViewController
+@interface LQPayVC : UIViewController
 
 @property (nonatomic, strong) LQAccountItemModel *accountItemModel;
 

@@ -84,7 +84,7 @@
     hud.labelText = HTTPRequestLoding_Text;
     hud.mode = MBProgressHUDModeIndeterminate;
     [self requestAccountListWithSessionid:self.sessionid];
-    [self requestUserPhoto];
+//    [self requestUserPhoto];
 }
 
 - (void)doLoading
