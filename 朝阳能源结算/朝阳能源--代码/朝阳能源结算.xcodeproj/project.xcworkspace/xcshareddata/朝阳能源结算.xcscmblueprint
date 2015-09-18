@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985" : 0,
+    "42AEF361CC5B85073D75F5CA5FE5C413CE3B22DD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FF6E468D-F167-454C-ABA2-37090A181BFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985" : "%E6%9C%9D%E9%98%B3%E8%83%BD%E6%BA%90--%E4%BB%A3%E7%A0%81",
+    "42AEF361CC5B85073D75F5CA5FE5C413CE3B22DD" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "朝阳能源结算",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "朝阳能源结算.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daqiangge\/ChaoYangNengYuan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42AEF361CC5B85073D75F5CA5FE5C413CE3B22DD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.180:8443\/svn\/CY-NYGK",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d6361230-2dd3-da41-abc3-1ef1291cfbe4++8985"
+    }
+  ]
+}
