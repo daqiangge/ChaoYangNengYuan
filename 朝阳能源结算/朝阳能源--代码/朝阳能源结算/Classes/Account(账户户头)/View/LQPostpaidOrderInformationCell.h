@@ -1,0 +1,19 @@
+//
+//  LQPostpaidOrderInformationCell.h
+//  朝阳能源结算
+//
+//  Created by admin on 15/9/21.
+//  Copyright © 2015年 dieshang. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface LQPostpaidOrderInformationCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *accountCodeLable;
+@property (weak, nonatomic) IBOutlet UILabel *accountperiodLable;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLable;
+
++ (LQPostpaidOrderInformationCell *)cellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+
+@end
