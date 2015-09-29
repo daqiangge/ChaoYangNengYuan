@@ -153,6 +153,8 @@
     
     [manager POST:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
+         LQLog(@"%@",operation.responseString);
+         
          LQPaidChargeModel *paidChargeModel = [LQPaidChargeModel objectWithKeyValues:operation.responseString];
          
          if (paidChargeModel.returns)

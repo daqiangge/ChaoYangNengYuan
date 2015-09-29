@@ -353,6 +353,7 @@
         if (model.returns)
         {
             [self.accountInformationView.headPortraitBtn setBackgroundImage:image forState:UIControlStateNormal];
+            [self.accountInformationView.headPortraitBtn setBackgroundImage:image forState:UIControlStateHighlighted];
             
             hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark"]];
             hud.mode = MBProgressHUDModeCustomView;
