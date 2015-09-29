@@ -551,6 +551,7 @@
         
         LQOrderVC *vc = [[LQOrderVC alloc] init];
         vc.orderModel = orderModel;
+        vc.accountItemModel = accountItemModel;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
