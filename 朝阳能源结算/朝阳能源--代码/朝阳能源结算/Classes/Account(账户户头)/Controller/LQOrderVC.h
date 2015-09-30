@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class LQOrderModel;
-@class LQAccountItemModel;
 
 @interface LQOrderVC : UIViewController
 
 @property (nonatomic, strong) LQOrderModel *orderModel;
-
-@property (nonatomic, strong) LQAccountItemModel *accountItemModel;
 
 @end
