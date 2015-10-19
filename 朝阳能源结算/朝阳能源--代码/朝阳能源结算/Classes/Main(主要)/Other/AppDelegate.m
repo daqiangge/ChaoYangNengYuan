@@ -10,6 +10,7 @@
 #import "LQAccountVC.h"
 #import "LQLoginVC.h"
 #import <AlipaySDK/AlipaySDK.h>
+#import <Bugly/CrashReporter.h>
 
 @interface AppDelegate ()
 
@@ -41,6 +42,9 @@
     self.window.rootViewController = [[LQNavigationController alloc] initWithRootViewController:[[LQLoginVC alloc] init]];
     
     [self.window makeKeyAndVisible];
+    
+    //BUG闪退监测收集
+    [[CrashReporter sharedInstance] installWithAppId:@"900010812"];
     
     return YES;
 }

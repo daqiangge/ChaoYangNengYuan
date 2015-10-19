@@ -183,6 +183,9 @@
 		84928A401B81D8080016B8E0 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2B1B81D8080016B8E0 /* UIScrollView+MJExtension.m */; };
 		84928A411B81D8080016B8E0 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2D1B81D8080016B8E0 /* UIScrollView+MJRefresh.m */; };
 		84928A421B81D8080016B8E0 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A2F1B81D8080016B8E0 /* UIView+MJExtension.m */; };
+		849537541BD4D69200F6B26B /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849537531BD4D69200F6B26B /* Bugly.framework */; settings = {ASSET_TAGS = (); }; };
+		849537561BD4D6C800F6B26B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849537551BD4D6C800F6B26B /* Security.framework */; };
+		849537581BD4D6D300F6B26B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 849537571BD4D6D300F6B26B /* libc++.tbd */; };
 		84AE729A1B82BA1A008A39BF /* LQLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE72991B82BA1A008A39BF /* LQLoginVC.m */; };
 		84AE72A21B82BD0C008A39BF /* CustomURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE729D1B82BD0C008A39BF /* CustomURLCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84AE72A31B82BD0C008A39BF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE729F1B82BD0C008A39BF /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -637,6 +640,9 @@
 		84928A2D1B81D8080016B8E0 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		84928A2E1B81D8080016B8E0 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		84928A2F1B81D8080016B8E0 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		849537531BD4D69200F6B26B /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		849537551BD4D6C800F6B26B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		849537571BD4D6D300F6B26B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		84AE72981B82BA1A008A39BF /* LQLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQLoginVC.h; sourceTree = "<group>"; };
 		84AE72991B82BA1A008A39BF /* LQLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQLoginVC.m; sourceTree = "<group>"; };
 		84AE729C1B82BD0C008A39BF /* CustomURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomURLCache.h; sourceTree = "<group>"; };
@@ -710,8 +716,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849537581BD4D6D300F6B26B /* libc++.tbd in Frameworks */,
+				849537561BD4D6C800F6B26B /* Security.framework in Frameworks */,
 				84387BBC1BBA37050088BD8D /* libz.tbd in Frameworks */,
 				84387BBA1BBA36FF0088BD8D /* Foundation.framework in Frameworks */,
+				849537541BD4D69200F6B26B /* Bugly.framework in Frameworks */,
 				84387BB81BBA36F70088BD8D /* UIKit.framework in Frameworks */,
 				84387BB61BBA36F10088BD8D /* CoreGraphics.framework in Frameworks */,
 				84387BB31BBA36E80088BD8D /* CoreTelephony.framework in Frameworks */,
@@ -1647,6 +1656,9 @@
 		84AE72A71B82D387008A39BF /* workspaces */ = {
 			isa = PBXGroup;
 			children = (
+				849537571BD4D6D300F6B26B /* libc++.tbd */,
+				849537551BD4D6C800F6B26B /* Security.framework */,
+				849537531BD4D69200F6B26B /* Bugly.framework */,
 				84387BBB1BBA37050088BD8D /* libz.tbd */,
 				84387BB91BBA36FF0088BD8D /* Foundation.framework */,
 				84387BB71BBA36F70088BD8D /* UIKit.framework */,

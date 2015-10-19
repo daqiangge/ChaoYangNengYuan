@@ -54,7 +54,7 @@
     [self.view endEditing:YES];
     
     //获取上一次存入的IP数据
-    NSMutableDictionary *ipDic       = [[LQKeyValueStore shareInstance].keyValueStore getObjectById:SQL_IP_Key fromTable:SQL_Account_TableName];
+    NSMutableDictionary *ipDic = [[LQKeyValueStore shareInstance].keyValueStore getObjectById:SQL_IP_Key fromTable:SQL_Account_TableName];
     NSString *name = ipDic[@"name"];
     NSString *accountid = ipDic[@"accountid"];
     NSString *note = ipDic[@"note"];
